@@ -1,5 +1,6 @@
 package com.thurmer.gedvindbor_table;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         final Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.activity_standards);
+                startActivity(new Intent(MainActivity.this, StandardsActivity.class));
             }
         });
 
