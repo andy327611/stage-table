@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thurmer.gedvindbor_table.StandardDataActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/textView8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Premachine diameter"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="159dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/innerDiameterTextView"
+        android:layout_alignLeft="@+id/innerDiameterTextView"
+        android:layout_alignStart="@+id/innerDiameterTextView"
+        android:layout_marginBottom="59dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Standard"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <TextView
+        android:id="@+id/innerDiameterTextView"
+        android:layout_width="159dp"
+        android:layout_height="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Inner diameter"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="169dp"
+        android:layout_marginBottom="45dp"
+        android:layout_above="@+id/minTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/formingTextView"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Forming"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="339dp"
+        android:layout_marginBottom="97dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/maxTextView"
+        android:layout_width="52dp"
+        android:layout_height="43dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Max"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="222dp"
+        android:layout_below="@+id/innerDiameterTextView"
+        android:layout_toRightOf="@+id/innerDiameterTextView"
+        android:layout_toEndOf="@+id/innerDiameterTextView" />
+
+    <TextView
+        android:id="@+id/minTextView"
+        android:layout_width="52dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="41dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Min"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="222dp"
+        android:layout_above="@+id/formingTextView"
+        android:layout_toLeftOf="@+id/innerDiameterTextView"
+        android:layout_toStartOf="@+id/innerDiameterTextView" />
+</android.widget.RelativeLayout>
