@@ -7,7 +7,7 @@
     tools:context="com.thurmer.gedvindbor_table.AboutActivity">
 
     <TextView
-        android:id="@+id/AboutTextView"
+        android:id="@+id/aboutTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +22,7 @@
         android:id="@+id/textView2"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:layout_below="@+id/AboutTextView"
+        android:layout_below="@+id/aboutTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
         android:text="Thürmer Tools is based on more than 100 years of production of high quality of thread cutting tools. We keep over 18.000 item numbers on stock - with a range of special tools and odd sizes not usually sourced from stock. We also carry a large stock of high quality thread gauges, drills, countersinks and carbide burrs."

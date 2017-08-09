@@ -19,7 +19,8 @@
         <activity android:name=".StandardsActivity" />
         <activity android:name=".StandardDataActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".FindStandardActivity"></activity>
     </application>
 
 </manifest>

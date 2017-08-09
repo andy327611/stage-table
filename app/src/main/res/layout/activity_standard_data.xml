@@ -7,7 +7,7 @@
     tools:context="com.thurmer.gedvindbor_table.StandardDataActivity">
 
     <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/settingsTextView"
         android:layout_width="300dp"
         android:layout_height="35dp"
         android:layout_above="@+id/textView8"
