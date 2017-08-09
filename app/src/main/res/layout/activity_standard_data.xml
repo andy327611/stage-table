@@ -7,41 +7,7 @@
     tools:context="com.thurmer.gedvindbor_table.StandardDataActivity">
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_alignTop="@+id/formingTextView"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6"
-        android:layout_marginTop="33dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="32dp"
-        android:layout_above="@+id/innerDiameterTextView"
-        android:layout_toLeftOf="@+id/textView4"
-        android:layout_toStartOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_above="@+id/maxTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="12dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_below="@+id/maxTextView"
-        android:layout_toRightOf="@+id/formingTextView"
-        android:layout_toEndOf="@+id/formingTextView" />
-
-    <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/settingsTextView"
         android:layout_width="300dp"
         android:layout_height="35dp"
         android:layout_above="@+id/textView8"
@@ -120,13 +86,12 @@
         android:layout_toLeftOf="@+id/innerDiameterTextView"
         android:layout_toStartOf="@+id/innerDiameterTextView" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_toLeftOf="@+id/textView5"
-        android:layout_toStartOf="@+id/textView5" />
-
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/maxTextView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="numberDecimal" />
 </android.widget.RelativeLayout>
