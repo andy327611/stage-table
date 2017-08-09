@@ -55,7 +55,7 @@
         android:textSize="24sp"
         tools:layout_editor_absoluteX="143dp"
         tools:layout_editor_absoluteY="339dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="108dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
@@ -124,9 +124,9 @@
         android:id="@+id/textView14"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView10"
         android:layout_alignRight="@+id/formingTextView"
         android:layout_alignEnd="@+id/formingTextView"
-        android:layout_marginBottom="42dp" />
+        android:layout_marginTop="49dp" />
 
 </android.widget.RelativeLayout>
