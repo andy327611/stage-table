@@ -1,9 +1,13 @@
 package com.thurmer.gedvindbor_table;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -29,5 +33,15 @@ public class StandardsActivity extends AppCompatActivity {
 
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View searchListV, int position, long id)
+            {
+                Intent intent = new Intent(getBaseContext(), StandardDataActivity.class);
+                intent.putExtra("selectedStandard", listView.getItemAtPosition(position).toString());
+                startActivity(intent);
+            }
+        });
     }
 }
