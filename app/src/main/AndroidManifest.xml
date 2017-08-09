@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".StandardsActivity" />
         <activity android:name=".StandardDataActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>
