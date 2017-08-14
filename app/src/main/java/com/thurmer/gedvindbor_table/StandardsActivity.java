@@ -7,8 +7,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.view.View;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class StandardsActivity extends AppCompatActivity {
@@ -28,8 +26,6 @@ public class StandardsActivity extends AppCompatActivity {
 
         listItems.add("M");
         listItems.add("MF");
-        listItems.add("UNC");
-        listItems.add("UNF");
 
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
@@ -38,7 +34,7 @@ public class StandardsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View searchListV, int position, long id)
             {
-                Intent intent = new Intent(getBaseContext(), StandardDataActivity.class);
+                Intent intent = new Intent(getBaseContext(), PitchActivity.class);
                 intent.putExtra("selectedStandard", listView.getItemAtPosition(position).toString());
                 startActivity(intent);
             }

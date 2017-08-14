@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="256"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="41dp"
         android:text="Pre-drill dimension"

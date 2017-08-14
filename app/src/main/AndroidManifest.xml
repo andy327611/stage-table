@@ -20,7 +20,8 @@
         <activity android:name=".StandardDataActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".AboutActivity" />
-        <activity android:name=".FindStandardActivity"></activity>
+        <activity android:name=".FindStandardActivity" />
+        <activity android:name=".PitchActivity"></activity>
     </application>
 
 </manifest>

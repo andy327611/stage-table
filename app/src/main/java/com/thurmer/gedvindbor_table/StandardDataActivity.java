@@ -12,6 +12,6 @@ public class StandardDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_standard_data);
 
         TextView standardNameTextView = (TextView)findViewById(R.id.standardNameTextView);
-        standardNameTextView.setText(getIntent().getStringExtra("selectedStandard"));
+        standardNameTextView.setText(getIntent().getStringExtra("selectedDiameter"));
     }
 }
