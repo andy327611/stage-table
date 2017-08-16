@@ -23,15 +23,22 @@ public class PitchActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     ListView listView;
 
+    String path;
+    String selectedStandard;
+    String nominalDiameter, pitch;
+
+    JSONArray jsonarray;
+    JSONObject jsonobject;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        selectedStandard = getIntent().getStringExtra("selectedStandard");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pitch);
         listView = (ListView) findViewById(R.id.list2);
 
         //Path selection
-        String path;
-        switch(getIntent().getStringExtra("selectedStandard")) {
+        switch(selectedStandard) {
             case "M":
                 path = "1_M.json";
                 break;
@@ -63,10 +70,12 @@ public class PitchActivity extends AppCompatActivity {
 
         //adding items to adapter
         try {
-            JSONArray jsonarray = new JSONArray(json);
+            jsonarray = new JSONArray(json);
             for (int i = 0; i < jsonarray.length(); i++) {
-                JSONObject jsonobject = jsonarray.getJSONObject(i);
-                listItems.add(jsonobject.getString("nominalDiameter"));
+                jsonobject = jsonarray.getJSONObject(i);
+                nominalDiameter = jsonobject.getString("nominalDiameter");
+                pitch = jsonobject.getString("pitch");
+                listItems.add("["+nominalDiameter+"] "+pitch+" mm");
             }
         } catch (JSONException e) {
             throw new RuntimeException(e);
@@ -81,7 +90,8 @@ public class PitchActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View searchListV, int position, long id)
             {
                 Intent intent = new Intent(getBaseContext(), StandardDataActivity.class);
-                intent.putExtra("selectedDiameter", listView.getItemAtPosition(position).toString());
+                intent.putExtra("path", path);
+                intent.putExtra("rowIndex", position);
                 startActivity(intent);
             }
         });
