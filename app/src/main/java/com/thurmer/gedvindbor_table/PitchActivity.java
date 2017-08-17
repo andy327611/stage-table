@@ -25,7 +25,9 @@ public class PitchActivity extends AppCompatActivity {
 
     String path;
     String selectedStandard;
-    String nominalDiameter, pitch;
+    String nominalDiameter, pitch, hardness;
+
+    Integer inclination;
 
     JSONArray jsonarray;
     JSONObject jsonobject;
@@ -41,9 +43,13 @@ public class PitchActivity extends AppCompatActivity {
         switch(selectedStandard) {
             case "M":
                 path = "1_M.json";
+                inclination = 60;
+                hardness = "6H";
                 break;
             case "MF":
                 path = "2_MF.json";
+                inclination = 60;
+                hardness = "6H";
                 break;
             default:
                 path = "";

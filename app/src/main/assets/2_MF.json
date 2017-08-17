@@ -1,442 +1,442 @@
 [
  {
    "nominalDiameter": "M 3",
-   "pitch": "0,35",
-   "minimumDiameter": "2,621",
-   "maximumDiameter": "2,677",
-   "predrillingDiameter": "2,65",
-   "predrillingFormingDiameter": "2,83"
+   "pitch": 0.35,
+   "minimumDiameter": 2.621,
+   "maximumDiameter": 2.677,
+   "predrillingDiameter": 2.65,
+   "predrillingFormingDiameter": 2.83
  },
  {
    "nominalDiameter": "M 4",
-   "pitch": "0,5",
-   "minimumDiameter": "3,459",
-   "maximumDiameter": "3,599",
-   "predrillingDiameter": "3,50",
-   "predrillingFormingDiameter": "3,75"
+   "pitch": 0.5,
+   "minimumDiameter": 3.459,
+   "maximumDiameter": 3.599,
+   "predrillingDiameter": 3.50,
+   "predrillingFormingDiameter": 3.75
  },
  {
    "nominalDiameter": "M 5",
-   "pitch": "0,5",
-   "minimumDiameter": "4,459",
-   "maximumDiameter": "4,599",
-   "predrillingDiameter": "4,50",
-   "predrillingFormingDiameter": "4,75"
+   "pitch": 0.5,
+   "minimumDiameter": 4.459,
+   "maximumDiameter": 4.599,
+   "predrillingDiameter": 4.50,
+   "predrillingFormingDiameter": 4.75
  },
  {
    "nominalDiameter": "M 6",
-   "pitch": "0,75",
-   "minimumDiameter": "5,189",
-   "maximumDiameter": "5,379",
-   "predrillingDiameter": "5,25",
-   "predrillingFormingDiameter": "5,63"
+   "pitch": 0.75,
+   "minimumDiameter": 5.189,
+   "maximumDiameter": 5.379,
+   "predrillingDiameter": 5.25,
+   "predrillingFormingDiameter": 5.63
  },
  {
    "nominalDiameter": "M 7",
-   "pitch": "0,75",
-   "minimumDiameter": "6,189",
-   "maximumDiameter": "6,379",
-   "predrillingDiameter": "6,25",
-   "predrillingFormingDiameter": "6,63"
+   "pitch": 0.75,
+   "minimumDiameter": 6.189,
+   "maximumDiameter": 6.379,
+   "predrillingDiameter": 6.25,
+   "predrillingFormingDiameter": 6.63
  },
  {
    "nominalDiameter": "M 8",
-   "pitch": "0,75",
-   "minimumDiameter": "7,189",
-   "maximumDiameter": "7,379",
-   "predrillingDiameter": "7,25",
-   "predrillingFormingDiameter": "7,63"
+   "pitch": 0.75,
+   "minimumDiameter": 7.189,
+   "maximumDiameter": 7.379,
+   "predrillingDiameter": 7.25,
+   "predrillingFormingDiameter": 7.63
  },
  {
    "nominalDiameter": "M 8",
-   "pitch": "1,0",
-   "minimumDiameter": "6,918",
-   "maximumDiameter": "7,154",
-   "predrillingDiameter": "7,00",
-   "predrillingFormingDiameter": "7,50"
+   "pitch": 1.0,
+   "minimumDiameter": 6.918,
+   "maximumDiameter": 7.154,
+   "predrillingDiameter": 7.00,
+   "predrillingFormingDiameter": 7.50
  },
  {
    "nominalDiameter": "M 9",
-   "pitch": "1,0",
-   "minimumDiameter": "7,918",
-   "maximumDiameter": "8,154",
-   "predrillingDiameter": "8,00",
-   "predrillingFormingDiameter": "8,50"
+   "pitch": 1.0,
+   "minimumDiameter": 7.918,
+   "maximumDiameter": 8.154,
+   "predrillingDiameter": 8.00,
+   "predrillingFormingDiameter": 8.50
  },
  {
    "nominalDiameter": "M 10",
-   "pitch": "0,8",
-   "minimumDiameter": "9,189",
-   "maximumDiameter": "9,379",
-   "predrillingDiameter": "9,25",
-   "predrillingFormingDiameter": "9,63"
+   "pitch": 0.8,
+   "minimumDiameter": 9.189,
+   "maximumDiameter": 9.379,
+   "predrillingDiameter": 9.25,
+   "predrillingFormingDiameter": 9.63
  },
  {
    "nominalDiameter": "M 10",
-   "pitch": "1,0",
-   "minimumDiameter": "8,918",
-   "maximumDiameter": "9,154",
-   "predrillingDiameter": "9,00",
-   "predrillingFormingDiameter": "9,50"
+   "pitch": 1.0,
+   "minimumDiameter": 8.918,
+   "maximumDiameter": 9.154,
+   "predrillingDiameter": 9.00,
+   "predrillingFormingDiameter": 9.50
  },
  {
    "nominalDiameter": "M 10",
-   "pitch": "1,25",
-   "minimumDiameter": "8,648",
-   "maximumDiameter": "8,913",
-   "predrillingDiameter": "8,75",
-   "predrillingFormingDiameter": "9,38"
+   "pitch": 1.25,
+   "minimumDiameter": 8.648,
+   "maximumDiameter": 8.913,
+   "predrillingDiameter": 8.75,
+   "predrillingFormingDiameter": 9.38
  },
  {
    "nominalDiameter": "M 11",
-   "pitch": "1,0",
-   "minimumDiameter": "9,918",
-   "maximumDiameter": "10,154",
-   "predrillingDiameter": "10,00",
-   "predrillingFormingDiameter": "10,50"
+   "pitch": 1.0,
+   "minimumDiameter": 9.918,
+   "maximumDiameter": 10.154,
+   "predrillingDiameter": 10.00,
+   "predrillingFormingDiameter": 10.50
  },
  {
    "nominalDiameter": "M 12",
-   "pitch": "1,0",
-   "minimumDiameter": "10,918",
-   "maximumDiameter": "11,154",
-   "predrillingDiameter": "11,00",
-   "predrillingFormingDiameter": "11,50"
+   "pitch": 1.0,
+   "minimumDiameter": 10.918,
+   "maximumDiameter": 11.154,
+   "predrillingDiameter": 11.00,
+   "predrillingFormingDiameter": 11.50
  },
  {
    "nominalDiameter": "M 12",
-   "pitch": "1,25",
-   "minimumDiameter": "10,648",
-   "maximumDiameter": "10,913",
-   "predrillingDiameter": "10,75",
-   "predrillingFormingDiameter": "11,38"
+   "pitch": 1.25,
+   "minimumDiameter": 10.648,
+   "maximumDiameter": 10.913,
+   "predrillingDiameter": 10.75,
+   "predrillingFormingDiameter": 11.38
  },
  {
    "nominalDiameter": "M 12",
-   "pitch": "1,5",
-   "minimumDiameter": "10,377",
-   "maximumDiameter": "10,677",
-   "predrillingDiameter": "10,50",
-   "predrillingFormingDiameter": "11,25"
+   "pitch": 1.5,
+   "minimumDiameter": 10.377,
+   "maximumDiameter": 10.677,
+   "predrillingDiameter": 10.50,
+   "predrillingFormingDiameter": 11.25
  },
  {
    "nominalDiameter": "M 13",
-   "pitch": "1,0",
-   "minimumDiameter": "11,918",
-   "maximumDiameter": "12,154",
-   "predrillingDiameter": "12,00",
-   "predrillingFormingDiameter": "12,50"
+   "pitch": 1.0,
+   "minimumDiameter": 11.918,
+   "maximumDiameter": 12.154,
+   "predrillingDiameter": 12.00,
+   "predrillingFormingDiameter": 12.50
  },
  {
    "nominalDiameter": "M 14",
-   "pitch": "1,0",
-   "minimumDiameter": "12,918",
-   "maximumDiameter": "13,154",
-   "predrillingDiameter": "13,00",
-   "predrillingFormingDiameter": "13,50"
+   "pitch": 1.0,
+   "minimumDiameter": 12.918,
+   "maximumDiameter": 13.154,
+   "predrillingDiameter": 13.00,
+   "predrillingFormingDiameter": 13.50
  },
  {
    "nominalDiameter": "M 14",
-   "pitch": "1,25",
-   "minimumDiameter": "12,648",
-   "maximumDiameter": "12,913",
-   "predrillingDiameter": "12,75",
-   "predrillingFormingDiameter": "13,38"
+   "pitch": 1.25,
+   "minimumDiameter": 12.648,
+   "maximumDiameter": 12.913,
+   "predrillingDiameter": 12.75,
+   "predrillingFormingDiameter": 13.38
  },
  {
    "nominalDiameter": "M 14",
-   "pitch": "1,5",
-   "minimumDiameter": "12,377",
-   "maximumDiameter": "12,677",
-   "predrillingDiameter": "12,50",
-   "predrillingFormingDiameter": "13,25"
+   "pitch": 1.5,
+   "minimumDiameter": 12.377,
+   "maximumDiameter": 12.677,
+   "predrillingDiameter": 12.50,
+   "predrillingFormingDiameter": 13.25
  },
  {
    "nominalDiameter": "M 15",
-   "pitch": "1,0",
-   "minimumDiameter": "13,918",
-   "maximumDiameter": "14,154",
-   "predrillingDiameter": "14,00",
-   "predrillingFormingDiameter": "14,50"
+   "pitch": 1.0,
+   "minimumDiameter": 13.918,
+   "maximumDiameter": 14.154,
+   "predrillingDiameter": 14.00,
+   "predrillingFormingDiameter": 14.50
  },
  {
    "nominalDiameter": "M 15",
-   "pitch": "1,5",
-   "minimumDiameter": "13,377",
-   "maximumDiameter": "13,677",
-   "predrillingDiameter": "13,50",
-   "predrillingFormingDiameter": "14,25"
+   "pitch": 1.5,
+   "minimumDiameter": 13.377,
+   "maximumDiameter": 13.677,
+   "predrillingDiameter": 13.50,
+   "predrillingFormingDiameter": 14.25
  },
  {
    "nominalDiameter": "M 16",
-   "pitch": "1,0",
-   "minimumDiameter": "14,918",
-   "maximumDiameter": "15,154",
-   "predrillingDiameter": "15,00",
-   "predrillingFormingDiameter": "15,50"
+   "pitch": 1.0,
+   "minimumDiameter": 14.918,
+   "maximumDiameter": 15.154,
+   "predrillingDiameter": 15.00,
+   "predrillingFormingDiameter": 15.50
  },
  {
    "nominalDiameter": "M 16",
-   "pitch": "1,5",
-   "minimumDiameter": "14,377",
-   "maximumDiameter": "14,677",
-   "predrillingDiameter": "14,50",
-   "predrillingFormingDiameter": "15,25"
+   "pitch": 1.5,
+   "minimumDiameter": 14.377,
+   "maximumDiameter": 14.677,
+   "predrillingDiameter": 14.50,
+   "predrillingFormingDiameter": 15.25
  },
  {
    "nominalDiameter": "M 17",
-   "pitch": "1,0",
-   "minimumDiameter": "15,918",
-   "maximumDiameter": "16,154",
-   "predrillingDiameter": "16,00",
-   "predrillingFormingDiameter": "16,50"
+   "pitch": 1.0,
+   "minimumDiameter": 15.918,
+   "maximumDiameter": 16.154,
+   "predrillingDiameter": 16.00,
+   "predrillingFormingDiameter": 16.50
  },
  {
    "nominalDiameter": "M 18",
-   "pitch": "1,0",
-   "minimumDiameter": "16,918",
-   "maximumDiameter": "17,154",
-   "predrillingDiameter": "17,00",
-   "predrillingFormingDiameter": "17,50"
+   "pitch": 1.0,
+   "minimumDiameter": 16.918,
+   "maximumDiameter": 17.154,
+   "predrillingDiameter": 17.00,
+   "predrillingFormingDiameter": 17.50
  },
  {
    "nominalDiameter": "M 18",
-   "pitch": "1,5",
-   "minimumDiameter": "16,377",
-   "maximumDiameter": "16,677",
-   "predrillingDiameter": "16,50",
-   "predrillingFormingDiameter": "17,25"
+   "pitch": 1.5,
+   "minimumDiameter": 16.377,
+   "maximumDiameter": 16.677,
+   "predrillingDiameter": 16.50,
+   "predrillingFormingDiameter": 17.25
  },
  {
    "nominalDiameter": "M 18",
-   "pitch": "2,0",
-   "minimumDiameter": "15,836",
-   "maximumDiameter": "16,211",
-   "predrillingDiameter": "16,00",
-   "predrillingFormingDiameter": "17,00"
+   "pitch": 2.0,
+   "minimumDiameter": 15.836,
+   "maximumDiameter": 16.211,
+   "predrillingDiameter": 16.00,
+   "predrillingFormingDiameter": 17.00
  },
  {
    "nominalDiameter": "M 20",
-   "pitch": "1,0",
-   "minimumDiameter": "18,918",
-   "maximumDiameter": "19,154",
-   "predrillingDiameter": "19,00",
-   "predrillingFormingDiameter": "19,50"
+   "pitch": 1.0,
+   "minimumDiameter": 18.918,
+   "maximumDiameter": 19.154,
+   "predrillingDiameter": 19.00,
+   "predrillingFormingDiameter": 19.50
  },
  {
    "nominalDiameter": "M 20",
-   "pitch": "1,5",
-   "minimumDiameter": "18,377",
-   "maximumDiameter": "18,677",
-   "predrillingDiameter": "18,50",
-   "predrillingFormingDiameter": "19,25"
+   "pitch": 1.5,
+   "minimumDiameter": 18.377,
+   "maximumDiameter": 18.677,
+   "predrillingDiameter": 18.50,
+   "predrillingFormingDiameter": 19.25
  },
  {
    "nominalDiameter": "M 20",
-   "pitch": "2,0",
-   "minimumDiameter": "17,836",
-   "maximumDiameter": "18,211",
-   "predrillingDiameter": "18,00",
-   "predrillingFormingDiameter": "19,00"
+   "pitch": 2.0,
+   "minimumDiameter": 17.836,
+   "maximumDiameter": 18.211,
+   "predrillingDiameter": 18.00,
+   "predrillingFormingDiameter": 19.00
  },
  {
    "nominalDiameter": "M 22",
-   "pitch": "1,0",
-   "minimumDiameter": "20,918",
-   "maximumDiameter": "21,154",
-   "predrillingDiameter": "21,00",
-   "predrillingFormingDiameter": "21,50"
+   "pitch": 1.0,
+   "minimumDiameter": 20.918,
+   "maximumDiameter": 21.154,
+   "predrillingDiameter": 21.00,
+   "predrillingFormingDiameter": 21.50
  },
  {
    "nominalDiameter": "M 22",
-   "pitch": "1,5",
-   "minimumDiameter": "20,377",
-   "maximumDiameter": "20,677",
-   "predrillingDiameter": "20,50",
-   "predrillingFormingDiameter": "21,25"
+   "pitch": 1.5,
+   "minimumDiameter": 20.377,
+   "maximumDiameter": 20.677,
+   "predrillingDiameter": 20.50,
+   "predrillingFormingDiameter": 21.25
  },
  {
    "nominalDiameter": "M 22",
-   "pitch": "2,0",
-   "minimumDiameter": "19,836",
-   "maximumDiameter": "20,211",
-   "predrillingDiameter": "20,00",
-   "predrillingFormingDiameter": "21,00"
+   "pitch": 2.0,
+   "minimumDiameter": 19.836,
+   "maximumDiameter": 20.211,
+   "predrillingDiameter": 20.00,
+   "predrillingFormingDiameter": 21.00
  },
  {
    "nominalDiameter": "M 24",
-   "pitch": "1,0",
-   "minimumDiameter": "22,918",
-   "maximumDiameter": "23,154",
-   "predrillingDiameter": "23,00",
-   "predrillingFormingDiameter": "23,50"
+   "pitch": 1.0,
+   "minimumDiameter": 22.918,
+   "maximumDiameter": 23.154,
+   "predrillingDiameter": 23.00,
+   "predrillingFormingDiameter": 23.50
  },
  {
    "nominalDiameter": "M 24",
-   "pitch": "1,5",
-   "minimumDiameter": "22,377",
-   "maximumDiameter": "22,677",
-   "predrillingDiameter": "22,50",
-   "predrillingFormingDiameter": "23,25"
+   "pitch": 1.5,
+   "minimumDiameter": 22.377,
+   "maximumDiameter": 22.677,
+   "predrillingDiameter": 22.50,
+   "predrillingFormingDiameter": 23.25
  },
  {
    "nominalDiameter": "M 24",
-   "pitch": "2,0",
-   "minimumDiameter": "21,836",
-   "maximumDiameter": "22,211",
-   "predrillingDiameter": "22,00",
-   "predrillingFormingDiameter": "23,00"
+   "pitch": 2.0,
+   "minimumDiameter": 21.836,
+   "maximumDiameter": 22.211,
+   "predrillingDiameter": 22.00,
+   "predrillingFormingDiameter": 23.00
  },
  {
    "nominalDiameter": "M 25",
-   "pitch": "1,0",
-   "minimumDiameter": "23,918",
-   "maximumDiameter": "24,154",
-   "predrillingDiameter": "24,00",
-   "predrillingFormingDiameter": "24,50"
+   "pitch": 1.0,
+   "minimumDiameter": 23.918,
+   "maximumDiameter": 24.154,
+   "predrillingDiameter": 24.00,
+   "predrillingFormingDiameter": 24.50
  },
  {
    "nominalDiameter": "M 25",
-   "pitch": "1,5",
-   "minimumDiameter": "23,377",
-   "maximumDiameter": "23,677",
-   "predrillingDiameter": "23,50",
-   "predrillingFormingDiameter": "24,25"
+   "pitch": 1.5,
+   "minimumDiameter": 23.377,
+   "maximumDiameter": 23.677,
+   "predrillingDiameter": 23.50,
+   "predrillingFormingDiameter": 24.25
  },
  {
    "nominalDiameter": "M 26",
-   "pitch": "1,5",
-   "minimumDiameter": "24,377",
-   "maximumDiameter": "24,677",
-   "predrillingDiameter": "24,50",
-   "predrillingFormingDiameter": "25,25"
+   "pitch": 1.5,
+   "minimumDiameter": 24.377,
+   "maximumDiameter": 24.677,
+   "predrillingDiameter": 24.50,
+   "predrillingFormingDiameter": 25.25
  },
  {
    "nominalDiameter": "M 27",
-   "pitch": "1,5",
-   "minimumDiameter": "25,377",
-   "maximumDiameter": "25,677",
-   "predrillingDiameter": "25,50",
-   "predrillingFormingDiameter": "26,25"
+   "pitch": 1.5,
+   "minimumDiameter": 25.377,
+   "maximumDiameter": 25.677,
+   "predrillingDiameter": 25.50,
+   "predrillingFormingDiameter": 26.25
  },
  {
    "nominalDiameter": "M 27",
-   "pitch": "2,0",
-   "minimumDiameter": "24,836",
-   "maximumDiameter": "25,211",
-   "predrillingDiameter": "25,00",
-   "predrillingFormingDiameter": "26,00"
+   "pitch": 2.0,
+   "minimumDiameter": 24.836,
+   "maximumDiameter": 25.211,
+   "predrillingDiameter": 25.00,
+   "predrillingFormingDiameter": 26.00
  },
  {
    "nominalDiameter": "M 28",
-   "pitch": "1,5",
-   "minimumDiameter": "26,377",
-   "maximumDiameter": "26,677",
-   "predrillingDiameter": "26,50",
-   "predrillingFormingDiameter": "27,25"
+   "pitch": 1.5,
+   "minimumDiameter": 26.377,
+   "maximumDiameter": 26.677,
+   "predrillingDiameter": 26.50,
+   "predrillingFormingDiameter": 27.25
  },
  {
    "nominalDiameter": "M 30",
-   "pitch": "1,5",
-   "minimumDiameter": "28,377",
-   "maximumDiameter": "28,677",
-   "predrillingDiameter": "28,50",
-   "predrillingFormingDiameter": "29,25"
+   "pitch": 1.5,
+   "minimumDiameter": 28.377,
+   "maximumDiameter": 28.677,
+   "predrillingDiameter": 28.50,
+   "predrillingFormingDiameter": 29.25
  },
  {
    "nominalDiameter": "M 30",
-   "pitch": "2,0",
-   "minimumDiameter": "27,836",
-   "maximumDiameter": "28,211",
-   "predrillingDiameter": "28,00",
-   "predrillingFormingDiameter": "29,00"
+   "pitch": 2.0,
+   "minimumDiameter": 27.836,
+   "maximumDiameter": 28.211,
+   "predrillingDiameter": 28.00,
+   "predrillingFormingDiameter": 29.00
  },
  {
    "nominalDiameter": "M 32",
-   "pitch": "1,5",
-   "minimumDiameter": "30,377",
-   "maximumDiameter": "30,677",
-   "predrillingDiameter": "30,50",
-   "predrillingFormingDiameter": "31,25"
+   "pitch": 1.5,
+   "minimumDiameter": 30.377,
+   "maximumDiameter": 30.677,
+   "predrillingDiameter": 30.50,
+   "predrillingFormingDiameter": 31.25
  },
  {
    "nominalDiameter": "M 33",
-   "pitch": "1,5",
-   "minimumDiameter": "31,377",
-   "maximumDiameter": "31,677",
-   "predrillingDiameter": "31,50",
-   "predrillingFormingDiameter": "32,25"
+   "pitch": 1.5,
+   "minimumDiameter": 31.377,
+   "maximumDiameter": 31.677,
+   "predrillingDiameter": 31.50,
+   "predrillingFormingDiameter": 32.25
  },
  {
    "nominalDiameter": "M 33",
-   "pitch": "2,0",
-   "minimumDiameter": "30,836",
-   "maximumDiameter": "31,211",
-   "predrillingDiameter": "31,00",
-   "predrillingFormingDiameter": "32,00"
+   "pitch": 2.0,
+   "minimumDiameter": 30.836,
+   "maximumDiameter": 31.211,
+   "predrillingDiameter": 31.00,
+   "predrillingFormingDiameter": 32.00
  },
  {
    "nominalDiameter": "M 35",
-   "pitch": "1,5",
-   "minimumDiameter": "33,377",
-   "maximumDiameter": "33,677",
-   "predrillingDiameter": "33,50",
-   "predrillingFormingDiameter": "34,25"
+   "pitch": 1.5,
+   "minimumDiameter": 33.377,
+   "maximumDiameter": 33.677,
+   "predrillingDiameter": 33.50,
+   "predrillingFormingDiameter": 34.25
  },
  {
    "nominalDiameter": "M 36",
-   "pitch": "1,5",
-   "minimumDiameter": "34,377",
-   "maximumDiameter": "34,677",
-   "predrillingDiameter": "34,50",
-   "predrillingFormingDiameter": "35,25"
+   "pitch": 1.5,
+   "minimumDiameter": 34.377,
+   "maximumDiameter": 34.677,
+   "predrillingDiameter": 34.50,
+   "predrillingFormingDiameter": 35.25
  },
  {
    "nominalDiameter": "M 36",
-   "pitch": "2,0",
-   "minimumDiameter": "33,836",
-   "maximumDiameter": "34,211",
-   "predrillingDiameter": "34,00",
-   "predrillingFormingDiameter": "35,00"
+   "pitch": 2.0,
+   "minimumDiameter": 33.836,
+   "maximumDiameter": 34.211,
+   "predrillingDiameter": 34.00,
+   "predrillingFormingDiameter": 35.00
  },
  {
    "nominalDiameter": "M 36",
-   "pitch": "3,0",
-   "minimumDiameter": "32,754",
-   "maximumDiameter": "33,254",
-   "predrillingDiameter": "33,00",
-   "predrillingFormingDiameter": "34,50"
+   "pitch": 3.0,
+   "minimumDiameter": 32.754,
+   "maximumDiameter": 33.254,
+   "predrillingDiameter": 33.00,
+   "predrillingFormingDiameter": 34.50
  },
  {
    "nominalDiameter": "M 38",
-   "pitch": "1,5",
-   "minimumDiameter": "36,377",
-   "maximumDiameter": "36,677",
-   "predrillingDiameter": "36,50",
-   "predrillingFormingDiameter": "37,25"
+   "pitch": 1.5,
+   "minimumDiameter": 36.377,
+   "maximumDiameter": 36.677,
+   "predrillingDiameter": 36.50,
+   "predrillingFormingDiameter": 37.25
  },
  {
    "nominalDiameter": "M 39",
-   "pitch": "1,5",
-   "minimumDiameter": "37,377",
-   "maximumDiameter": "37,677",
-   "predrillingDiameter": "37,50",
-   "predrillingFormingDiameter": "38,25"
+   "pitch": 1.5,
+   "minimumDiameter": 37.377,
+   "maximumDiameter": 37.677,
+   "predrillingDiameter": 37.50,
+   "predrillingFormingDiameter": 38.25
  },
  {
    "nominalDiameter": "M 39",
-   "pitch": "2,0",
-   "minimumDiameter": "36,836",
-   "maximumDiameter": "37,211",
-   "predrillingDiameter": "37,00",
-   "predrillingFormingDiameter": "38,00"
+   "pitch": 2.0,
+   "minimumDiameter": 36.836,
+   "maximumDiameter": 37.211,
+   "predrillingDiameter": 37.00,
+   "predrillingFormingDiameter": 38.00
  },
  {
    "nominalDiameter": "M 39",
-   "pitch": "3,0",
-   "minimumDiameter": "35,756",
-   "maximumDiameter": "36,254",
-   "predrillingDiameter": "36,00",
-   "predrillingFormingDiameter": "37,50"
+   "pitch": 3.0,
+   "minimumDiameter": 35.756,
+   "maximumDiameter": 36.254,
+   "predrillingDiameter": 36.00,
+   "predrillingFormingDiameter": 37.50
  }
 ]

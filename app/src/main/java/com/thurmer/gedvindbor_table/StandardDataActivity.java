@@ -12,12 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class StandardDataActivity extends AppCompatActivity {
-    String path;
-    String nominalDiameter, pitch;
-    String predrillingDiameter;
-    String predrillingFormingDiameter;
-    String minimumDiameter;
-    String maximumDiameter;
+    String path, nominalDiameter, pitch;
+    Float predrillingDiameter, predrillingFormingDiameter, minimumDiameter, maximumDiameter;
     Integer rowIndex;
 
     JSONArray jsonarray;
@@ -54,18 +50,24 @@ public class StandardDataActivity extends AppCompatActivity {
             jsonobject = jsonarray.getJSONObject(rowIndex);
             nominalDiameter = jsonobject.getString("nominalDiameter");
             pitch = jsonobject.getString("pitch");
-            predrillingDiameter = jsonobject.getString("predrillingDiameter");
-            predrillingFormingDiameter = jsonobject.getString("predrillingFormingDiameter");
-            minimumDiameter = jsonobject.getString("minimumDiameter");
-            maximumDiameter = jsonobject.getString("maximumDiameter");
+            predrillingDiameter = Float.valueOf(jsonobject.getString("predrillingDiameter"));
+            if (jsonobject.has("predrillingFormingDiameter")) {
+                predrillingFormingDiameter = Float.valueOf(jsonobject.getString("predrillingFormingDiameter"));
+            }
+            minimumDiameter = Float.valueOf(jsonobject.getString("minimumDiameter"));
+            maximumDiameter = Float.valueOf(jsonobject.getString("maximumDiameter"));
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
 
         standardNameTextView.setText("["+nominalDiameter+"] "+pitch+" mm");
-        predrillingDiameterTextView.setText(predrillingDiameter);
-        predrillingFormingDiameterTextView.setText(predrillingFormingDiameter);
-        minTextView.setText(minimumDiameter);
-        maxTextView.setText(maximumDiameter);
+        predrillingDiameterTextView.setText(Float.toString(predrillingDiameter));
+        if (predrillingFormingDiameter != null) {
+            predrillingFormingDiameterTextView.setText(Float.toString(predrillingFormingDiameter));
+        } else {
+            predrillingFormingDiameterTextView.setText("N/A");
+        }
+        minTextView.setText(Float.toString(minimumDiameter));
+        maxTextView.setText(Float.toString(maximumDiameter));
     }
 }
