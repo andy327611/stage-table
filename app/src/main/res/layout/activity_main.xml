@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.thurmer.gedvindbor_table.MainActivity">
+    tools:context="com.thurmer.gevindbor_table.MainActivity">
 
     <ImageView
         android:id="@+id/Logo1"
@@ -15,7 +15,8 @@
         android:layout_marginTop="16dp"
         app:srcCompat="@drawable/logo_footer"
         tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:contentDescription="Thurmer logo"/>
 
     <Button
         android:id="@+id/button"

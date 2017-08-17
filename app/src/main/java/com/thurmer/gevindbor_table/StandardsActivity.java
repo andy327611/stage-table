@@ -1,4 +1,4 @@
-package com.thurmer.gedvindbor_table;
+package com.thurmer.gevindbor_table;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.View;
 import java.util.ArrayList;
 
 public class StandardsActivity extends AppCompatActivity {
-    ArrayList<String> listItems = new ArrayList<String>();
+    ArrayList<String> listItems = new ArrayList<>();
     ArrayAdapter<String> adapter;
     ListView listView;
 
@@ -20,7 +20,7 @@ public class StandardsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_standards);
         listView = (ListView) findViewById(R.id.list);
 
-        adapter=new ArrayAdapter<String>(this,
+        adapter=new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
 

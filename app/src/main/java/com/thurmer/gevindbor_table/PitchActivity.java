@@ -1,14 +1,12 @@
-package com.thurmer.gedvindbor_table;
+package com.thurmer.gevindbor_table;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,7 +17,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class PitchActivity extends AppCompatActivity {
-    ArrayList<String> listItems = new ArrayList<String>();
+    ArrayList<String> listItems = new ArrayList<>();
     ArrayAdapter<String> adapter;
     ListView listView;
 
@@ -70,7 +68,7 @@ public class PitchActivity extends AppCompatActivity {
         }
 
         //adapter
-        adapter=new ArrayAdapter<String>(this,
+        adapter=new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
 

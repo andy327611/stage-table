@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.thurmer.gedvindbor_table.StandardDataActivity"
+    tools:context="com.thurmer.gevindbor_table.StandardDataActivity"
     android:orientation="vertical">
 
     <TextView
@@ -12,7 +14,6 @@
 
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_centerHorizontal="true"
 
         android:gravity="center_vertical|center_horizontal"
         android:text="Pitch"
@@ -26,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="62dp"
 
-        android:layout_centerHorizontal="true"
         android:gravity="center_vertical|center_horizontal"
         android:textAlignment="center"
         android:textSize="42sp"/>
@@ -36,7 +36,6 @@
 
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_centerHorizontal="true"
 
         android:gravity="center_vertical|center_horizontal"
         android:text="Inner diameter"
@@ -55,7 +54,6 @@
 
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:layout_centerHorizontal="true"
 
             android:layout_weight="1"
             android:gravity="center_vertical|center_horizontal"
@@ -69,7 +67,6 @@
 
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:layout_centerHorizontal="true"
 
             android:layout_weight="1"
             android:gravity="center_vertical|center_horizontal"
@@ -90,7 +87,6 @@
 
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:layout_centerHorizontal="true"
 
             android:layout_weight="1"
             android:gravity="center_vertical|center_horizontal"
@@ -101,7 +97,6 @@
 
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:layout_centerHorizontal="true"
 
             android:layout_weight="1"
             android:gravity="center_vertical|center_horizontal"
@@ -114,7 +109,6 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
 
-        android:layout_centerHorizontal="true"
         android:gravity="center_vertical|center_horizontal"
         android:text="predrilling diameter"
         android:textAlignment="center"
@@ -128,7 +122,6 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
 
-        android:layout_centerHorizontal="true"
         android:gravity="center_vertical|center_horizontal"
         android:textAlignment="center"
         android:textSize="24sp" />
@@ -138,7 +131,6 @@
 
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_centerHorizontal="true"
 
         android:gravity="center_vertical|center_horizontal"
         android:text="predrilling forming diameter"
@@ -151,9 +143,10 @@
 
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_centerHorizontal="true"
 
         android:gravity="center_vertical|center_horizontal"
         android:textSize="24sp" />
 
-</android.widget.LinearLayout>
+</LinearLayout>
+
+</android.widget.ScrollView>

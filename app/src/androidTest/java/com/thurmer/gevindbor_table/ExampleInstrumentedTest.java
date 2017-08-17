@@ -1,4 +1,4 @@
-package com.thurmer.gedvindbor_table;
+package com.thurmer.gevindbor_table;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.thurmer.gedvindbor_table", appContext.getPackageName());
+        assertEquals("com.thurmer.gevindbor_table", appContext.getPackageName());
     }
 }

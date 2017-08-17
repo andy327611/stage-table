@@ -1,4 +1,4 @@
-package com.thurmer.gedvindbor_table;
+package com.thurmer.gevindbor_table;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
