@@ -3,150 +3,281 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.thurmer.gevindbor_table.StandardDataActivity"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textView"
-
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-
-        android:gravity="center_vertical|center_horizontal"
-        android:text="Pitch"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimary" />
-
-    <TextView
-        android:id="@+id/standardNameTextView"
-
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-
-        android:gravity="center_vertical|center_horizontal"
-        android:textAlignment="center"
-        android:textSize="42sp"/>
-
-    <TextView
-        android:id="@+id/textview14"
-
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-
-        android:gravity="center_vertical|center_horizontal"
-        android:text="Inner diameter"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimary" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_height="match_parent"
+        tools:context="com.thurmer.gevindbor_table.StandardDataActivity"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/standardNameTitleTV"
 
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
 
-            android:layout_weight="1"
+            android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Min"
-            android:textSize="24sp"
+            android:text="Selected standard"
             android:textColor="#FFFFFF"
-            android:background="@color/colorPrimary"/>
-
-        <TextView
-            android:id="@+id/textView11"
-
-            android:layout_width="0dp"
-            android:layout_height="35dp"
-
-            android:layout_weight="1"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="Max"
-            android:textSize="24sp"
-            android:textColor="#FFFFFF"
-            android:background="@color/colorPrimary" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <TextView
-            android:id="@+id/minTextView"
-
-            android:layout_width="0dp"
-            android:layout_height="35dp"
-
-            android:layout_weight="1"
-            android:gravity="center_vertical|center_horizontal"
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/maxTextView"
+            android:id="@+id/standardNameTV"
 
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textSize="42sp" />
+
+        <TextView
+            android:id="@+id/inclinationTitleTV"
+
+            android:layout_width="match_parent"
             android:layout_height="35dp"
 
-            android:layout_weight="1"
+            android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
+            android:text="Inclination"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/inclinationTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/nominalDiameterTitleTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Nominal diameter"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/nominalDiameterTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/pitchTitleTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Pitch"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/pitchTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/threadsPrInchTitleTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Threads/Inch"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/threadsPrInchTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/innerDiameterTitleTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Inner diameter"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/minMaxTitleLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/minTitleTV"
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Min"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/maxTitleTV"
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Max"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/innerDiameterLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/minTV"
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/maxTV"
+
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/predrillingDiameterTitleTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Predrilling diameter"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/predrillingDiameterTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/FormingDiameterLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+
+                android:id="@+id/cuttingDiameterTitleTV"
+                android:layout_width="match_parent"
+
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="cutting"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/formingDiameterTitleTV"
+
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="forming"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cuttingDiameterLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/cuttingDiameterTV"
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+
+                android:gravity="center_vertical|center_horizontal"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/formingDiameterTV"
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="24sp" />
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView8"
-
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-
-        android:gravity="center_vertical|center_horizontal"
-        android:text="predrilling diameter"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimary" />
-
-    <TextView
-        android:id="@+id/predrillingDiameterTextView"
-
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-
-        android:gravity="center_vertical|center_horizontal"
-        android:textAlignment="center"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/innerDiameterTextView"
-
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-
-        android:gravity="center_vertical|center_horizontal"
-        android:text="predrilling forming diameter"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimary" />
-
-    <TextView
-        android:id="@+id/predrillingFormingDiameterTextView"
-
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-
-        android:gravity="center_vertical|center_horizontal"
-        android:textSize="24sp" />
-
-</LinearLayout>
-
 </android.widget.ScrollView>

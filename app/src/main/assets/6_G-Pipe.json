@@ -1,0 +1,163 @@
+[
+ {
+   "nominalDiameter": "1\\16",
+   "threadsPrInch": "28",
+   "outerDiameter": 7.723,
+   "minimumDiameter": 6.561,
+   "maximumDiameter": 6.843,
+   "cuttingDiameter": 6.7,
+   "formingDiameter": 7.4
+ },
+ {
+   "nominalDiameter": "1\\8",
+   "threadsPrInch": "28",
+   "outerDiameter": 9.728,
+   "minimumDiameter": 8.566,
+   "maximumDiameter": 8.848,
+   "cuttingDiameter": 8.7,
+   "formingDiameter": 9.4
+ },
+ {
+   "nominalDiameter": "1\\4",
+   "threadsPrInch": "19",
+   "outerDiameter": 13.157,
+   "minimumDiameter": 11.445,
+   "maximumDiameter": 11.89,
+   "cuttingDiameter": 11.75,
+   "formingDiameter": 12.6
+ },
+ {
+   "nominalDiameter": "3\\8",
+   "threadsPrInch": "19",
+   "outerDiameter": 16.662,
+   "minimumDiameter": 14.95,
+   "maximumDiameter": 15.395,
+   "cuttingDiameter": 15.25,
+   "formingDiameter": 16
+ },
+ {
+   "nominalDiameter": "1\\2",
+   "threadsPrInch": "14",
+   "outerDiameter": 20.955,
+   "minimumDiameter": 18.631,
+   "maximumDiameter": 19.172,
+   "cuttingDiameter": 19,
+   "formingDiameter": 20.2
+ },
+ {
+   "nominalDiameter": "5\\8",
+   "threadsPrInch": "14",
+   "outerDiameter": 22.911,
+   "minimumDiameter": 20.587,
+   "maximumDiameter": 21.128,
+   "cuttingDiameter": 21,
+   "formingDiameter": 22.1
+ },
+ {
+   "nominalDiameter": "3\\4",
+   "threadsPrInch": "14",
+   "outerDiameter": 26.441,
+   "minimumDiameter": 24.117,
+   "maximumDiameter": 24.658,
+   "cuttingDiameter": 24.5,
+   "formingDiameter": 25.7
+ },
+ {
+   "nominalDiameter": "7\\8",
+   "threadsPrInch": "14",
+   "outerDiameter": 30.201,
+   "minimumDiameter": 27.877,
+   "maximumDiameter": 28.418,
+   "cuttingDiameter": 28.3,
+   "formingDiameter": 29.4
+ },
+ {
+   "nominalDiameter": "1",
+   "threadsPrInch": "11",
+   "outerDiameter": 33.249,
+   "minimumDiameter": 30.291,
+   "maximumDiameter": 30.931,
+   "cuttingDiameter": 30.5,
+   "formingDiameter": 32.3
+ },
+ {
+   "nominalDiameter": "1 1\\8",
+   "threadsPrInch": "11",
+   "outerDiameter": 37.297,
+   "minimumDiameter": 34.939,
+   "maximumDiameter": 35.579,
+   "cuttingDiameter": 35.5
+ },
+ {
+   "nominalDiameter": "1 1\\4",
+   "threadsPrInch": "11",
+   "outerDiameter": 41.91,
+   "minimumDiameter": 38.952,
+   "maximumDiameter": 39.592,
+   "cuttingDiameter": 39.5
+ },
+ {
+   "nominalDiameter": "1 3\\8",
+   "threadsPrInch": "11",
+   "outerDiameter": 44.323,
+   "minimumDiameter": 41.365,
+   "maximumDiameter": 42.005,
+   "cuttingDiameter": 41.5
+ },
+ {
+   "nominalDiameter": "1 1\\2",
+   "threadsPrInch": "11",
+   "outerDiameter": 47.803,
+   "minimumDiameter": 44.845,
+   "maximumDiameter": 45.485,
+   "cuttingDiameter": 45
+ },
+ {
+   "nominalDiameter": "1 3\\4",
+   "threadsPrInch": "11",
+   "outerDiameter": 53.746,
+   "minimumDiameter": 50.788,
+   "maximumDiameter": 51.428,
+   "cuttingDiameter": 51
+ },
+ {
+   "nominalDiameter": "2",
+   "threadsPrInch": "11",
+   "outerDiameter": 59.614,
+   "minimumDiameter": 56.656,
+   "maximumDiameter": 57.296,
+   "cuttingDiameter": 57
+ },
+ {
+   "nominalDiameter": "2 1\\4",
+   "threadsPrInch": "11",
+   "outerDiameter": 65.71,
+   "minimumDiameter": 62.752,
+   "maximumDiameter": 63.392,
+   "cuttingDiameter": 63
+ },
+ {
+   "nominalDiameter": "2 1\\2",
+   "threadsPrInch": "11",
+   "outerDiameter": 75.184,
+   "minimumDiameter": 72.226,
+   "maximumDiameter": 72.866,
+   "cuttingDiameter": 72.5
+ },
+ {
+   "nominalDiameter": "2 3\\4",
+   "threadsPrInch": "11",
+   "outerDiameter": 81.534,
+   "minimumDiameter": 79.576,
+   "maximumDiameter": 79.216,
+   "cuttingDiameter": 79
+},
+ {
+   "nominalDiameter": "3",
+   "threadsPrInch": "11",
+   "outerDiameter": 87.884,
+   "minimumDiameter": 84.926,
+   "maximumDiameter": 85.566,
+   "cuttingDiameter": 85.5
+ }
+]

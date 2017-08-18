@@ -23,7 +23,7 @@ public class PitchActivity extends AppCompatActivity {
 
     String path;
     String selectedStandard;
-    String nominalDiameter, pitch, hardness;
+    String nominalDiameter, pitch, threadsPrInch, hardness;
 
     Integer inclination;
 
@@ -48,6 +48,29 @@ public class PitchActivity extends AppCompatActivity {
                 path = "2_MF.json";
                 inclination = 60;
                 hardness = "6H";
+                break;
+            case "UNC":
+                path = "3_UNC.json";
+                inclination = 60;
+                hardness = "2B";
+                break;
+            case "UNF":
+                path = "4_UNF.json";
+                inclination = 60;
+                hardness = "2B";
+                break;
+            case "UNEF":
+                path = "5_UNEF.json";
+                inclination = 60;
+                hardness = "2B";
+                break;
+            case "G-Pipe":
+                path = "6_G-Pipe.json";
+                inclination = 55;
+                break;
+            case "TR":
+                path = "7_TR.json";
+                inclination = 30;
                 break;
             default:
                 path = "";
@@ -78,8 +101,14 @@ public class PitchActivity extends AppCompatActivity {
             for (int i = 0; i < jsonarray.length(); i++) {
                 jsonobject = jsonarray.getJSONObject(i);
                 nominalDiameter = jsonobject.getString("nominalDiameter");
-                pitch = jsonobject.getString("pitch");
-                listItems.add("["+nominalDiameter+"] "+pitch+" mm");
+                if(jsonobject.has("pitch")) {
+                    pitch = jsonobject.getString("pitch");
+                    listItems.add("["+nominalDiameter+"] "+pitch+" mm");
+                }
+                if(jsonobject.has("threadsPrInch")) {
+                    threadsPrInch = jsonobject.getString("threadsPrInch");
+                    listItems.add("["+nominalDiameter+"] "+threadsPrInch);
+                }
             }
         } catch (JSONException e) {
             throw new RuntimeException(e);
@@ -94,8 +123,11 @@ public class PitchActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View searchListV, int position, long id)
             {
                 Intent intent = new Intent(getBaseContext(), StandardDataActivity.class);
+                intent.putExtra("selectedStandard", selectedStandard);
                 intent.putExtra("path", path);
+                intent.putExtra("inclination", inclination);
                 intent.putExtra("rowIndex", position);
+                intent.putExtra("hardness", hardness);
                 startActivity(intent);
             }
         });

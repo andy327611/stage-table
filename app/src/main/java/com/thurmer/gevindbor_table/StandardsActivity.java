@@ -18,6 +18,7 @@ public class StandardsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standards);
+
         listView = (ListView) findViewById(R.id.list);
 
         adapter=new ArrayAdapter<>(this,
@@ -26,6 +27,11 @@ public class StandardsActivity extends AppCompatActivity {
 
         listItems.add("M");
         listItems.add("MF");
+        listItems.add("UNC");
+        listItems.add("UNF");
+        listItems.add("UNEF");
+        listItems.add("G-Pipe");
+        listItems.add("TR");
 
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);

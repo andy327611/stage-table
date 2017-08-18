@@ -1,0 +1,121 @@
+[
+ {
+   "nominalDiameter": "Tr 8",
+   "pitch": 1.5,
+   "minimumDiameter": 6.5,
+   "maximumDiameter": 6.69,
+   "predrillingDiameter": 6.6
+ },
+ {
+   "nominalDiameter": "Tr 10",
+   "pitch": 2,
+   "minimumDiameter": 8,
+   "maximumDiameter": 8.236,
+   "predrillingDiameter": 8.2
+ },
+ {
+   "nominalDiameter": "Tr 10",
+   "pitch": 3,
+   "minimumDiameter": 7,
+   "maximumDiameter": 7.315,
+   "predrillingDiameter": 7.3
+ },
+ {
+   "nominalDiameter": "Tr 12",
+   "pitch": 3,
+   "minimumDiameter": 9,
+   "maximumDiameter": 9.315,
+   "predrillingDiameter": 9.3
+ },
+ {
+   "nominalDiameter": "Tr 14",
+   "pitch": 3,
+   "minimumDiameter": 11,
+   "maximumDiameter": 11.315,
+   "predrillingDiameter": 11.3
+ },
+ {
+   "nominalDiameter": "Tr 14",
+   "pitch": 4,
+   "minimumDiameter": 10,
+   "maximumDiameter": 10.375,
+   "predrillingDiameter": 10.3
+ },
+ {
+   "nominalDiameter": "Tr 16",
+   "pitch": 4,
+   "minimumDiameter": 12,
+   "maximumDiameter": 12.375,
+   "predrillingDiameter": 12.3
+ },
+ {
+   "nominalDiameter": "Tr 18",
+   "pitch": 4,
+   "minimumDiameter": 14,
+   "maximumDiameter": 14.375,
+   "predrillingDiameter": 14.3
+ },
+ {
+   "nominalDiameter": "Tr 20",
+   "pitch": 4,
+   "minimumDiameter": 16,
+   "maximumDiameter": 16.375,
+   "predrillingDiameter": 16.3
+ },
+ {
+   "nominalDiameter": "Tr 22",
+   "pitch": 5,
+   "minimumDiameter": 17,
+   "maximumDiameter": 17.45,
+   "predrillingDiameter": 17.4
+ },
+ {
+   "nominalDiameter": "Tr 24",
+   "pitch": 5,
+   "minimumDiameter": 19,
+   "maximumDiameter": 19.45,
+   "predrillingDiameter": 19.4
+ },
+ {
+   "nominalDiameter": "Tr 26",
+   "pitch": 5,
+   "minimumDiameter": 21,
+   "maximumDiameter": 21.45,
+   "predrillingDiameter": 21.4
+ },
+ {
+   "nominalDiameter": "Tr 28",
+   "pitch": 5,
+   "minimumDiameter": 23,
+   "maximumDiameter": 23.45,
+   "predrillingDiameter": 23.4
+ },
+ {
+   "nominalDiameter": "Tr 30",
+   "pitch": 6,
+   "minimumDiameter": 24,
+   "maximumDiameter": 24.5,
+   "predrillingDiameter": 24.4
+ },
+ {
+   "nominalDiameter": "Tr 32",
+   "pitch": 6,
+   "minimumDiameter": 26,
+   "maximumDiameter": 26.5,
+   "predrillingDiameter": 26.4
+ },
+ {
+   "nominalDiameter": "Tr 36",
+   "pitch": 6,
+   "minimumDiameter": 30,
+   "maximumDiameter": 30.5,
+   "predrillingDiameter": 30.4
+ },
+ {
+   "nominalDiameter": "Tr 40",
+   "pitch": 7,
+   "minimumDiameter": 33,
+   "maximumDiameter": 33.56,
+   "predrillingDiameter": 33.4
+ }
+]
