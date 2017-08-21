@@ -120,6 +120,28 @@
             android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/outerDiameterTitleTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Outer diameter"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/outerDiameterTV"
+
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
             android:id="@+id/innerDiameterTitleTV"
 
             android:layout_width="match_parent"

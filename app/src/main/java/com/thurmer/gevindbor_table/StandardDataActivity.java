@@ -8,13 +8,14 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 public class StandardDataActivity extends AppCompatActivity {
     String selectedStandard, path, nominalDiameter, threadsPrInch, hardness;
-    Float  pitch, predrillingDiameter, cuttingDiameter, formingDiameter, minimumDiameter, maximumDiameter;
+    Float  pitch, outerDiameter, predrillingDiameter, cuttingDiameter, formingDiameter, minimumDiameter, maximumDiameter;
     Integer rowIndex, inclination;
 
     JSONArray jsonarray;
@@ -37,6 +38,8 @@ public class StandardDataActivity extends AppCompatActivity {
         TextView pitchTV = (TextView)findViewById(R.id.pitchTV);
         TextView threadsPrInchTitleTV = (TextView)findViewById(R.id.threadsPrInchTitleTV);
         TextView threadsPrInchTV = (TextView)findViewById(R.id.threadsPrInchTV);
+        TextView outerDiameterTitleTV = (TextView) findViewById(R.id.outerDiameterTitleTV);
+        TextView outerDiameterTV = (TextView) findViewById(R.id.outerDiameterTV);
         TextView predrillingDiameterTV = (TextView)findViewById(R.id.predrillingDiameterTV);
         TextView cuttingDiameterTitleTV = (TextView) findViewById(R.id.cuttingDiameterTitleTV);
         TextView formingDiameterTitleTV = (TextView)findViewById(R.id.formingDiameterTitleTV);
@@ -85,6 +88,14 @@ public class StandardDataActivity extends AppCompatActivity {
             } else {
                 threadsPrInchTitleTV.setVisibility(View.GONE);
                 threadsPrInchTV.setVisibility(View.GONE);
+            }
+
+            if (jsonobject.has("outerDiameter")) {
+                outerDiameter = Float.valueOf(jsonobject.getString("outerDiameter"));
+                outerDiameterTV.setText(String.valueOf(outerDiameter));
+            } else {
+                outerDiameterTitleTV.setVisibility(View.GONE);
+                outerDiameterTV.setVisibility(View.GONE);
             }
 
             if (jsonobject.has("predrillingDiameter")) {
