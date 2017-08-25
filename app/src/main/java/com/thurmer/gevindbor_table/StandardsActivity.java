@@ -32,6 +32,8 @@ public class StandardsActivity extends AppCompatActivity {
         listItems.add("UNEF");
         listItems.add("G-Pipe");
         listItems.add("TR");
+        listItems.add("W-WF (Rough)");
+        listItems.add("W-WF (Fine)");
 
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);

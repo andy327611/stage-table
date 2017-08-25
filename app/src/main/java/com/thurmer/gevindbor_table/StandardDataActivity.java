@@ -40,18 +40,19 @@ public class StandardDataActivity extends AppCompatActivity {
         TextView threadsPrInchTV = (TextView)findViewById(R.id.threadsPrInchTV);
         TextView outerDiameterTitleTV = (TextView) findViewById(R.id.outerDiameterTitleTV);
         TextView outerDiameterTV = (TextView) findViewById(R.id.outerDiameterTV);
+        TextView innerDiameterTitleTV = (TextView) findViewById(R.id.innerDiameterTitleTV);
+        TextView minTitleTV = (TextView) findViewById(R.id.minTitleTV);
+        TextView maxTitleTV = (TextView)findViewById(R.id.maxTitleTV);
+        TextView minTV = (TextView)findViewById(R.id.minTV);
+        TextView maxTV = (TextView)findViewById(R.id.maxTV);
         TextView predrillingDiameterTV = (TextView)findViewById(R.id.predrillingDiameterTV);
         TextView cuttingDiameterTitleTV = (TextView) findViewById(R.id.cuttingDiameterTitleTV);
         TextView formingDiameterTitleTV = (TextView)findViewById(R.id.formingDiameterTitleTV);
         TextView cuttingDiameterTV = (TextView) findViewById(R.id.cuttingDiameterTV);
         TextView formingDiameterTV = (TextView)findViewById(R.id.formingDiameterTV);
-        TextView minTV = (TextView)findViewById(R.id.minTV);
-        TextView maxTV = (TextView)findViewById(R.id.maxTV);
 
         if(getIntent().hasExtra("hardness")) {
             hardness = getIntent().getStringExtra("hardness");
-            TextView minTitleTV = (TextView)findViewById(R.id.minTitleTV);
-            TextView maxTitleTV = (TextView)findViewById(R.id.maxTitleTV);
 
             minTitleTV.setText(minTitleTV.getText() + " (" + hardness + ")");
             maxTitleTV.setText(maxTitleTV.getText() + " (" + hardness + ")");
@@ -121,8 +122,17 @@ public class StandardDataActivity extends AppCompatActivity {
                 formingDiameterTV.setVisibility(View.GONE);
             }
 
-            minimumDiameter = Float.valueOf(jsonobject.getString("minimumDiameter"));
-            maximumDiameter = Float.valueOf(jsonobject.getString("maximumDiameter"));
+            if(jsonobject.has("minimumDiameter ") && jsonobject.has("minimumDiameter ")) {
+                minimumDiameter = Float.valueOf(jsonobject.getString("minimumDiameter"));
+                maximumDiameter = Float.valueOf(jsonobject.getString("maximumDiameter"));
+            } else {
+                innerDiameterTitleTV.setVisibility(View.GONE);
+                minTitleTV.setVisibility(View.GONE);
+                maxTitleTV.setVisibility(View.GONE);
+                minTV.setVisibility(View.GONE);
+                maxTV.setVisibility(View.GONE);
+            }
+
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
