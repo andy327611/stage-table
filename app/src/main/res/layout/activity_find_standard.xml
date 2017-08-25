@@ -1,80 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.thurmer.gevindbor_table.FindStandardActivity">
 
     <TextView
-        android:id="@+id/insertTextView"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:text="or"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="126dp"
-        android:layout_alignBaseline="@+id/button7"
-        android:layout_alignBottom="@+id/button7"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:id="@+id/findStandardTItleTV"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/findStandardTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:text="Insert hole diameter:"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="126dp" />
-
-    <TextView
-        android:id="@+id/findStandardTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp"
         android:text="Find standard"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/findStandardSubTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Insert hole diameter:"
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+        android:id="@+id/findStandardET"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_above="@+id/button6"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp" />
+        android:ems="10"
+        android:inputType="textPersonName|numberDecimal"
+        android:textAlignment="center" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
+        android:id="@+id/findStandardBttn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="FIND" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button6"
-        android:layout_toLeftOf="@+id/button6"
-        android:layout_toStartOf="@+id/button6"
-        android:layout_marginTop="87dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/insertTextView"
-        android:layout_alignBottom="@+id/insertTextView"
-        android:layout_toRightOf="@+id/button6"
-        android:layout_toEndOf="@+id/button6" />
-</android.widget.RelativeLayout>
+</android.widget.LinearLayout>
