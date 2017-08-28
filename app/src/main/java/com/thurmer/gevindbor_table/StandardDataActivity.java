@@ -26,11 +26,13 @@ public class StandardDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standard_data);
 
+        //Gets extra data from the previous activity
         selectedStandard = getIntent().getStringExtra("selectedStandard");
         inclination = getIntent().getIntExtra("inclination", 0);
         path = getIntent().getStringExtra("path");
         rowIndex = getIntent().getIntExtra("rowIndex", 0);
 
+        //Gains access to the needed textViews
         TextView standardNameTV = (TextView)findViewById(R.id.standardNameTV);
         TextView inclinationTV = (TextView)findViewById(R.id.inclinationTV);
         TextView nominalDiameterTV = (TextView)findViewById(R.id.nominalDiameterTV);
@@ -51,6 +53,7 @@ public class StandardDataActivity extends AppCompatActivity {
         TextView cuttingDiameterTV = (TextView) findViewById(R.id.cuttingDiameterTV);
         TextView formingDiameterTV = (TextView)findViewById(R.id.formingDiameterTV);
 
+        //Displays hardness if present
         if(getIntent().hasExtra("hardness")) {
             hardness = getIntent().getStringExtra("hardness");
 
@@ -58,6 +61,7 @@ public class StandardDataActivity extends AppCompatActivity {
             maxTitleTV.setText(maxTitleTV.getText() + " (" + hardness + ")");
         }
 
+        //Converts JSON file into string
         String json = null;
         try {
             InputStream is = getAssets().open(path);
@@ -70,6 +74,7 @@ public class StandardDataActivity extends AppCompatActivity {
             ex.printStackTrace();
         }
 
+        //Extracts information from the JSON string and then hides or displays textViews accordingly
         try {
             jsonarray = new JSONArray(json);
             jsonobject = jsonarray.getJSONObject(rowIndex);
@@ -125,6 +130,8 @@ public class StandardDataActivity extends AppCompatActivity {
             if(jsonobject.has("minimumDiameter ") && jsonobject.has("minimumDiameter ")) {
                 minimumDiameter = Float.valueOf(jsonobject.getString("minimumDiameter"));
                 maximumDiameter = Float.valueOf(jsonobject.getString("maximumDiameter"));
+                minTV.setText(String.valueOf(minimumDiameter));
+                maxTV.setText(String.valueOf(maximumDiameter));
             } else {
                 innerDiameterTitleTV.setVisibility(View.GONE);
                 minTitleTV.setVisibility(View.GONE);
@@ -140,8 +147,5 @@ public class StandardDataActivity extends AppCompatActivity {
         standardNameTV.setText(selectedStandard);
         inclinationTV.setText(String.valueOf(inclination) + "°");
         nominalDiameterTV.setText(nominalDiameter);
-
-        minTV.setText(String.valueOf(minimumDiameter));
-        maxTV.setText(String.valueOf(maximumDiameter));
     }
 }

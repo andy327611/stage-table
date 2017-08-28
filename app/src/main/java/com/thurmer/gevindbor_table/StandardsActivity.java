@@ -19,6 +19,8 @@ public class StandardsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standards);
 
+        //Fills up an arrayList with the given standards' names to apply its adapter to the listView
+
         listView = (ListView) findViewById(R.id.list);
 
         adapter=new ArrayAdapter<>(this,
@@ -38,6 +40,7 @@ public class StandardsActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
 
+        //Makes the list items clickable to pass the standard to the next activity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View searchListV, int position, long id)

@@ -35,9 +35,10 @@ public class PitchActivity extends AppCompatActivity {
         selectedStandard = getIntent().getStringExtra("selectedStandard");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pitch);
+
         listView = (ListView) findViewById(R.id.list2);
 
-        //Path selection
+        //Selects the filepath, inclination and hardness of the standard based on the selectedStandard string
         switch(selectedStandard) {
             case "M":
                 path = "1_M.json";
@@ -85,7 +86,7 @@ public class PitchActivity extends AppCompatActivity {
                 break;
         }
 
-        //JSON to string
+        //converts the JSON to a string
         String json = null;
         try {
             InputStream is = getAssets().open(path);
@@ -98,12 +99,11 @@ public class PitchActivity extends AppCompatActivity {
             ex.printStackTrace();
         }
 
-        //adapter
+        //Fills an arrayList with the table's nominal diameter and pitch or threads per inch
         adapter=new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
 
-        //adding items to adapter
         try {
             jsonarray = new JSONArray(json);
             for (int i = 0; i < jsonarray.length(); i++) {
@@ -125,7 +125,7 @@ public class PitchActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
 
-        //clicklistener
+        //Adds a clickListener to the items to bring information to the nex activity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View searchListV, int position, long id)
