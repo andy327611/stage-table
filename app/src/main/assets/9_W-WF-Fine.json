@@ -1,54 +1,54 @@
 [
  {
-   "nominalDiameter": "3\\16",
+   "nominalDiameter": "3/16",
    "threadsPrInch": "32",
    "outerDiameter": 4.762,
    "predrillingDiameter": 4
  },
  {
-   "nominalDiameter": "7\\32",
+   "nominalDiameter": "7/32",
    "threadsPrInch": "28",
    "outerDiameter": 5.556,
    "predrillingDiameter": 4.6
  },
  {
-   "nominalDiameter": "1\\4",
+   "nominalDiameter": "1/4",
    "threadsPrInch": "26",
    "outerDiameter": 6.35,
    "predrillingDiameter": 5.4
  },
  {
-   "nominalDiameter": "5\\16",
+   "nominalDiameter": "5/16",
    "threadsPrInch": "22",
    "outerDiameter": 7.938,
    "predrillingDiameter": 6.8
  },
  {
-   "nominalDiameter": "3\\8",
+   "nominalDiameter": "3/8",
    "threadsPrInch": "20",
    "outerDiameter": 9.525,
    "predrillingDiameter": 8.3
  },
  {
-   "nominalDiameter": "7\\16",
+   "nominalDiameter": "7/16",
    "threadsPrInch": "18",
    "outerDiameter": 11.112,
    "predrillingDiameter": 9.8
  },
  {
-   "nominalDiameter": "1\\2",
+   "nominalDiameter": "1/2",
    "threadsPrInch": "16",
    "outerDiameter": 12.7,
    "predrillingDiameter": 11
  },
  {
-   "nominalDiameter": "9\\16",
+   "nominalDiameter": "9/16",
    "threadsPrInch": "16",
    "outerDiameter": 14.288,
    "predrillingDiameter": 12.5
  },
  {
-   "nominalDiameter": "5\\8",
+   "nominalDiameter": "5/8",
    "threadsPrInch": "14",
    "outerDiameter": 15.875,
    "predrillingDiameter": 14
