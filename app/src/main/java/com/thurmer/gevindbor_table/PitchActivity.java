@@ -73,12 +73,12 @@ public class PitchActivity extends AppCompatActivity {
                 path = "7_TR.json";
                 inclination = 30;
                 break;
-            case "W-WF (Rough)":
-                path = "8_W-WF-Rough.json";
+            case "W-WF(Rough)":
+                path = "8_W-WF(Rough).json";
                 inclination = 55;
                 break;
-            case "W-WF (Fine)":
-                path = "9_W-WF-Fine.json";
+            case "W-WF(Fine)":
+                path = "9_W-WF(Fine).json";
                 inclination = 55;
                 break;
             default:

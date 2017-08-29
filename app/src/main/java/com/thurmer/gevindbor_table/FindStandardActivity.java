@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class FindStandardActivity extends AppCompatActivity {
-    ArrayList<String> pathList;
     ArrayList<String> standardsList;
+    ArrayList<String> nominalList;
     ArrayAdapter<String> adapter;
 
     String json;
@@ -38,17 +38,17 @@ public class FindStandardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_standard);
 
-        pathList = new ArrayList<>();
         standardsList = new ArrayList<>();
-        pathList.add("1_M.json");
-        pathList.add("2_MF.json");
-        pathList.add("3_UNC.json");
-        pathList.add("4_UNF.json");
-        pathList.add("5_UNEF.json");
-        pathList.add("6_G-Pipe.json");
-        pathList.add("7_TR.json");
-        pathList.add("8_W-WF-Rough.json");
-        pathList.add("9_W-WF-Fine.json");
+        nominalList = new ArrayList<>();
+        standardsList.add("M");
+        standardsList.add("MF");
+        standardsList.add("UNC");
+        standardsList.add("UNF");
+        standardsList.add("UNEF");
+        standardsList.add("G-Pipe");
+        standardsList.add("TR");
+        standardsList.add("W-WF(Rough)");
+        standardsList.add("W-WF(Fine)");
 
         findStandardET = (EditText) findViewById(R.id.findStandardET);
         findStandardBttn = (Button) findViewById(R.id.findStandardBttn);
@@ -56,19 +56,17 @@ public class FindStandardActivity extends AppCompatActivity {
 
         adapter=new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,
-                standardsList);
+                nominalList);
 
         findStandardBttn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                standardsList.clear();
+                nominalList.clear();
                 if(findStandardET.getText().toString().matches("^[0-9]{1,2}([.][0-9]{1,2})?$")) {
                     usrValue = findStandardET.getText().toString();
 
-                    for (Iterator<String> i = pathList.iterator(); i.hasNext();) {
-                        String path = i.next();
-
+                    for (int i = 0; i < standardsList.size(); i++) {
                         try {
-                            InputStream is = getAssets().open(path);
+                            InputStream is = getAssets().open((i+1)+"_"+standardsList.get(i)+".json");
                             int size = is.available();
                             byte[] buffer = new byte[size];
                             is.read(buffer);
@@ -89,7 +87,7 @@ public class FindStandardActivity extends AppCompatActivity {
                                 }
 
                                 if((Math.abs(Double.valueOf(cuttingDiameter)-Double.valueOf(usrValue)) <= 0.000001)) {
-                                    standardsList.add(jsonobject.getString("nominalDiameter"));
+                                    nominalList.add("["+standardsList.get(i) + "] " + jsonobject.getString("nominalDiameter"));
                                 }
                             }
                         } catch (JSONException e) {
