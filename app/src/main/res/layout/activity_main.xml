@@ -16,24 +16,24 @@
         app:srcCompat="@drawable/logo_footer"
         tools:layout_editor_absoluteX="39dp"
         tools:layout_editor_absoluteY="16dp"
-        android:contentDescription="Thurmer logo"/>
+        android:contentDescription="@string/contentDesc_thurmerLogo"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="256dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:text="Pre-drill dimension"
         android:layout_below="@+id/Logo1"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
         android:backgroundTint="@color/colorPrimary"
-        android:textColor="#FFFFFF"/>
+        android:text="@string/text_threadsList"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Find Standard"
+        android:text="@string/text_findStandard"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/button"
         android:layout_alignRight="@+id/button"
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Settings"
+        android:text="@string/text_settings"
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2"
@@ -61,7 +61,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About"
+        android:text="@string/text_about"
         android:layout_below="@+id/button3"
         android:layout_marginTop="10dp"
         android:layout_alignLeft="@+id/button3"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
-        android:text="Exit"
+        android:text="@string/text_exit"
         android:layout_below="@+id/button4"
         android:layout_alignLeft="@+id/button4"
         android:layout_alignStart="@+id/button4"

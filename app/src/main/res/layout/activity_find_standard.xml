@@ -7,20 +7,11 @@
     tools:context="com.thurmer.gevindbor_table.FindStandardActivity">
 
     <TextView
-        android:id="@+id/findStandardTItleTV"
+        android:id="@+id/findStandardTitleTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Find standard"
-        android:textAlignment="center"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/findStandardSubTitleTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Insert hole diameter:"
+        android:text="@string/text_insertHoleDiameter"
         android:textAlignment="center"
         android:textSize="24sp" />
 
@@ -39,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="FIND"
+        android:text="@string/text_find"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="#FFFFFF"/>
 

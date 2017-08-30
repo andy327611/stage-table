@@ -16,12 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.thurmer.gevindbor_table.StandardsActivity" />
+        <activity
+            android:name="com.thurmer.gevindbor_table.StandardsActivity"
+            android:label="@string/text_threadsList" />
         <activity android:name="com.thurmer.gevindbor_table.StandardDataActivity" />
-        <activity android:name="com.thurmer.gevindbor_table.SettingsActivity" />
+        <activity
+            android:name="com.thurmer.gevindbor_table.SettingsActivity"
+            android:label="@string/text_settings"/>
         <activity android:name="com.thurmer.gevindbor_table.AboutActivity" />
-        <activity android:name="com.thurmer.gevindbor_table.FindStandardActivity" />
-        <activity android:name="com.thurmer.gevindbor_table.PitchActivity" />
+        <activity
+            android:name="com.thurmer.gevindbor_table.FindStandardActivity"
+            android:label="@string/text_findStandard" />
+        <activity
+            android:name="com.thurmer.gevindbor_table.PitchActivity"
+            android:label="@string/text_pitch"/>
     </application>
 
 </manifest>

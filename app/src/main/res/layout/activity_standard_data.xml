@@ -17,7 +17,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Selected standard"
+            android:text="@string/text_standardSelezionato"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -39,7 +39,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Inclination"
+            android:text="@string/text_inclination"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -61,7 +61,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Nominal diameter"
+            android:text="@string/text_nominalDiameter"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -83,7 +83,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Pitch"
+            android:text="@string/text_pitch"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -105,7 +105,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Threads/Inch"
+            android:text="@string/text_threadInch"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -127,7 +127,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Outer diameter"
+            android:text="@string/text_outerDiameter"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -149,7 +149,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Inner diameter"
+            android:text="@string/text_innerDiameter"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -169,7 +169,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="Min"
+                android:text="@string/text_min"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
@@ -182,7 +182,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="Max"
+                android:text="@string/text_max"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -223,7 +223,7 @@
 
             android:background="@color/colorPrimary"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Predrilling diameter"
+            android:text="@string/text_predrillingDiameter"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
@@ -254,7 +254,7 @@
                 android:layout_height="35dp"
                 android:background="@color/colorPrimary"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="cutting"
+                android:text="@string/text_cutting"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
@@ -268,7 +268,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="forming"
+                android:text="@string/text_forming"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
         </LinearLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Gevindbor-Table</string>
+    <string name="contentDesc_thurmerLogo">Thurmer logo</string>
+    <string name="text_threadsList">Lista Filetti</string>
+    <string name="text_findStandard">Trova Standard</string>
+    <string name="text_settings">Impostazioni</string>
+    <string name="text_about">Info</string>
+    <string name="text_exit">Esci</string>
+    <string name="text_insertHoleDiameter">Diametro foro:</string>
+    <string name="text_standardSelezionato">Standard selezionato</string>
+    <string name="text_inclination">Inclinazione</string>
+    <string name="text_nominalDiameter">Diametro nominale</string>
+    <string name="text_threadInch">Filetti/Pollice</string>
+    <string name="text_outerDiameter">Diametro esterno</string>
+    <string name="text_innerDiameter">Diametro interno</string>
+    <string name="text_min">Min.</string>
+    <string name="text_max">Max.</string>
+    <string name="text_predrillingDiameter">Diametro pre-foratura</string>
+    <string name="text_cutting">taglio</string>
+    <string name="text_forming">formatura</string>
+    <string name="text_pitch">Passo</string>
+    <string name="text_find">Cerca</string>
+</resources>
