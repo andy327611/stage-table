@@ -8,7 +8,6 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,8 +27,6 @@ public class StandardDataActivity extends AppCompatActivity {
 
         //Gets extra data from the previous activity
         selectedStandard = getIntent().getStringExtra("selectedStandard");
-        inclination = getIntent().getIntExtra("inclination", 0);
-        path = getIntent().getStringExtra("path");
         rowIndex = getIntent().getIntExtra("rowIndex", 0);
 
         //Gains access to the needed textViews
@@ -53,30 +50,35 @@ public class StandardDataActivity extends AppCompatActivity {
         TextView cuttingDiameterTV = (TextView) findViewById(R.id.cuttingDiameterTV);
         TextView formingDiameterTV = (TextView)findViewById(R.id.formingDiameterTV);
 
-        //Displays hardness if present
-        if(getIntent().hasExtra("hardness")) {
-            hardness = getIntent().getStringExtra("hardness");
+        //Identifies the selected standard inside the master json file
+        jsonarray = getJSONArray("0_Standards.json");
+        try {
+            for(int i = 0; i < jsonarray.length(); i++) {
+                jsonobject = jsonarray.getJSONObject(i);
+                if(jsonobject.getString("name").equals(selectedStandard)) {
+                    inclination = jsonobject.getInt("inclination");
 
-            minTitleTV.setText(minTitleTV.getText() + " (" + hardness + ")");
-            maxTitleTV.setText(maxTitleTV.getText() + " (" + hardness + ")");
+                    //Displays hardness if present
+                    if(jsonobject.has("hardness")) {
+                        hardness = jsonobject.getString("hardness");
+                        minTitleTV.setText(minTitleTV.getText() + " (" + hardness + ")");
+                        maxTitleTV.setText(maxTitleTV.getText() + " (" + hardness + ")");
+                    }
+
+                    path = (i + 1) + "_" + selectedStandard + ".json";
+
+                    break;
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
         //Converts JSON file into string
-        String json = null;
-        try {
-            InputStream is = getAssets().open(path);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        jsonarray = getJSONArray(path);
 
         //Extracts information from the JSON string and then hides or displays textViews accordingly
         try {
-            jsonarray = new JSONArray(json);
             jsonobject = jsonarray.getJSONObject(rowIndex);
             nominalDiameter = jsonobject.getString("nominalDiameter");
 
@@ -127,7 +129,7 @@ public class StandardDataActivity extends AppCompatActivity {
                 formingDiameterTV.setVisibility(View.GONE);
             }
 
-            if(jsonobject.has("minimumDiameter ") && jsonobject.has("minimumDiameter ")) {
+            if(jsonobject.has("minimumDiameter") && jsonobject.has("maximumDiameter")) {
                 minimumDiameter = Float.valueOf(jsonobject.getString("minimumDiameter"));
                 maximumDiameter = Float.valueOf(jsonobject.getString("maximumDiameter"));
                 minTV.setText(String.valueOf(minimumDiameter));
@@ -139,13 +141,33 @@ public class StandardDataActivity extends AppCompatActivity {
                 minTV.setVisibility(View.GONE);
                 maxTV.setVisibility(View.GONE);
             }
-
         } catch (JSONException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         standardNameTV.setText(selectedStandard);
         inclinationTV.setText(String.valueOf(inclination) + "°");
         nominalDiameterTV.setText(nominalDiameter);
+    }
+
+    //converts the JSON to a string
+    private JSONArray getJSONArray(String path) {
+        String json = null;
+        try {
+            InputStream is = getAssets().open(path);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        try{
+            return new JSONArray(json);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

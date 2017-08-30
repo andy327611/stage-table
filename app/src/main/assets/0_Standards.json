@@ -1,0 +1,43 @@
+[
+    {
+        "name": "M",
+        "inclination": 60,
+        "hardness": "6H"
+    },
+    {
+        "name": "MF",
+        "inclination": 60,
+        "hardness": "6H"
+    },
+    {
+        "name": "UNC",
+        "inclination": 60,
+        "hardness": "2B"
+    },
+    {
+        "name": "UNF",
+        "inclination": 60,
+        "hardness": "2B"
+    },
+    {
+        "name": "UNEF",
+        "inclination": 60,
+        "hardness": "2B"
+    },
+    {
+        "name": "G-Pipe",
+        "inclination": 55
+    },
+    {
+        "name": "TR",
+        "inclination": 30
+    },
+    {
+        "name": "W-WF(Rough)",
+        "inclination": 55
+    },
+    {
+        "name": "W-WF(Fine)",
+        "inclination": 55
+    }
+]

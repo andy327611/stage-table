@@ -7,12 +7,22 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.view.View;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class StandardsActivity extends AppCompatActivity {
     ArrayList<String> listItems = new ArrayList<>();
     ArrayAdapter<String> adapter;
     ListView listView;
+
+    JSONArray jsonarray;
+    JSONObject jsonobject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +37,18 @@ public class StandardsActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,
                 listItems);
 
-        listItems.add("M");
-        listItems.add("MF");
-        listItems.add("UNC");
-        listItems.add("UNF");
-        listItems.add("UNEF");
-        listItems.add("G-Pipe");
-        listItems.add("TR");
-        listItems.add("W-WF(Rough)");
-        listItems.add("W-WF(Fine)");
+        //Lists all the standards based on the master json file info
+        jsonarray = getJSONArray("0_Standards.json");
+
+        try {
+            for(int i = 0; i < jsonarray.length(); i++) {
+                jsonobject = jsonarray.getJSONObject(i);
+                    listItems.add(jsonobject.getString("name"));
+
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
@@ -47,8 +60,30 @@ public class StandardsActivity extends AppCompatActivity {
             {
                 Intent intent = new Intent(getBaseContext(), PitchActivity.class);
                 intent.putExtra("selectedStandard", listView.getItemAtPosition(position).toString());
+                intent.putExtra("position", position);
                 startActivity(intent);
             }
         });
+    }
+
+    //converts the JSON to a string
+    private JSONArray getJSONArray(String path) {
+        String json = null;
+        try {
+            InputStream is = getAssets().open(path);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        try{
+            return new JSONArray(json);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

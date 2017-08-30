@@ -1,8 +1,10 @@
 package com.thurmer.gevindbor_table;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,12 +17,13 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class FindStandardActivity extends AppCompatActivity {
     ArrayList<String> standardsList;
-    ArrayList<String> nominalList;
     ArrayAdapter<String> adapter;
+    ArrayList<String> itemList;
+    ArrayList<String> foundList;
+    ArrayList<Integer> rowList;
 
     String json;
 
@@ -38,29 +41,37 @@ public class FindStandardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_standard);
 
-        standardsList = new ArrayList<>();
-        nominalList = new ArrayList<>();
-        standardsList.add("M");
-        standardsList.add("MF");
-        standardsList.add("UNC");
-        standardsList.add("UNF");
-        standardsList.add("UNEF");
-        standardsList.add("G-Pipe");
-        standardsList.add("TR");
-        standardsList.add("W-WF(Rough)");
-        standardsList.add("W-WF(Fine)");
-
         findStandardET = (EditText) findViewById(R.id.findStandardET);
         findStandardBttn = (Button) findViewById(R.id.findStandardBttn);
         findStandardLV = (ListView) findViewById(R.id.findStandardLV);
 
+        standardsList = new ArrayList<>();
+        itemList = new ArrayList<>();
+        foundList = new ArrayList<>();
+        rowList = new ArrayList<>();
+
+        //Gathers standard names from the standards master json
+        jsonarray = getJSONArray("0_Standards.json");
+        try {
+            for(int i = 0; i < jsonarray.length(); i++) {
+                jsonobject = jsonarray.getJSONObject(i);
+                standardsList.add(jsonobject.getString("name"));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         adapter=new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,
-                nominalList);
+                itemList);
 
         findStandardBttn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                nominalList.clear();
+                //Flushes the lists
+                itemList.clear();
+                foundList.clear();
+                rowList.clear();
+
                 if(findStandardET.getText().toString().matches("^[0-9]{1,2}([.][0-9]{1,2})?$")) {
                     usrValue = findStandardET.getText().toString();
 
@@ -87,7 +98,9 @@ public class FindStandardActivity extends AppCompatActivity {
                                 }
 
                                 if((Math.abs(Double.valueOf(cuttingDiameter)-Double.valueOf(usrValue)) <= 0.000001)) {
-                                    nominalList.add("["+standardsList.get(i) + "] " + jsonobject.getString("nominalDiameter"));
+                                    foundList.add(standardsList.get(i));
+                                    rowList.add(j);
+                                    itemList.add("["+standardsList.get(i) + "] " + jsonobject.getString("nominalDiameter"));
                                 }
                             }
                         } catch (JSONException e) {
@@ -96,6 +109,18 @@ public class FindStandardActivity extends AppCompatActivity {
 
                         adapter.notifyDataSetChanged();
                         findStandardLV.setAdapter(adapter);
+                        
+                        //Adds a clickListener to the items to bring information to the nex activity
+                        findStandardLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View searchListV, int position, long id)
+                            {
+                                Intent intent = new Intent(getBaseContext(), StandardDataActivity.class);
+                                intent.putExtra("selectedStandard", foundList.get(position));
+                                intent.putExtra("rowIndex", rowList.get(position));
+                                startActivity(intent);
+                            }
+                        });
                     }
                 } else {
                     findStandardET.setText("");
@@ -103,6 +128,27 @@ public class FindStandardActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    //converts the JSON to a string
+    private JSONArray getJSONArray(String path) {
+        String json = null;
+        try {
+            InputStream is = getAssets().open(path);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        try{
+            return new JSONArray(json);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

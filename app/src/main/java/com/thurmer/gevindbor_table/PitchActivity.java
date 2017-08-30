@@ -23,81 +23,24 @@ public class PitchActivity extends AppCompatActivity {
 
     String path;
     String selectedStandard;
-    String nominalDiameter, pitch, threadsPrInch, hardness;
+    String nominalDiameter, pitch, threadsPrInch;
 
-    Integer inclination;
+    int position;
 
     JSONArray jsonarray;
     JSONObject jsonobject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        selectedStandard = getIntent().getStringExtra("selectedStandard");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pitch);
 
         listView = (ListView) findViewById(R.id.list2);
 
-        //Selects the filepath, inclination and hardness of the standard based on the selectedStandard string
-        switch(selectedStandard) {
-            case "M":
-                path = "1_M.json";
-                inclination = 60;
-                hardness = "6H";
-                break;
-            case "MF":
-                path = "2_MF.json";
-                inclination = 60;
-                hardness = "6H";
-                break;
-            case "UNC":
-                path = "3_UNC.json";
-                inclination = 60;
-                hardness = "2B";
-                break;
-            case "UNF":
-                path = "4_UNF.json";
-                inclination = 60;
-                hardness = "2B";
-                break;
-            case "UNEF":
-                path = "5_UNEF.json";
-                inclination = 60;
-                hardness = "2B";
-                break;
-            case "G-Pipe":
-                path = "6_G-Pipe.json";
-                inclination = 55;
-                break;
-            case "TR":
-                path = "7_TR.json";
-                inclination = 30;
-                break;
-            case "W-WF(Rough)":
-                path = "8_W-WF(Rough).json";
-                inclination = 55;
-                break;
-            case "W-WF(Fine)":
-                path = "9_W-WF(Fine).json";
-                inclination = 55;
-                break;
-            default:
-                path = "";
-                break;
-        }
+        selectedStandard = getIntent().getStringExtra("selectedStandard");
+        position = getIntent().getIntExtra("position", 0);
 
-        //converts the JSON to a string
-        String json = null;
-        try {
-            InputStream is = getAssets().open(path);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        path = (position + 1) + "_" + selectedStandard + ".json";
 
         //Fills an arrayList with the table's nominal diameter and pitch or threads per inch
         adapter=new ArrayAdapter<>(this,
@@ -105,7 +48,7 @@ public class PitchActivity extends AppCompatActivity {
                 listItems);
 
         try {
-            jsonarray = new JSONArray(json);
+            jsonarray = getJSONArray(path);
             for (int i = 0; i < jsonarray.length(); i++) {
                 jsonobject = jsonarray.getJSONObject(i);
                 nominalDiameter = jsonobject.getString("nominalDiameter");
@@ -132,12 +75,30 @@ public class PitchActivity extends AppCompatActivity {
             {
                 Intent intent = new Intent(getBaseContext(), StandardDataActivity.class);
                 intent.putExtra("selectedStandard", selectedStandard);
-                intent.putExtra("path", path);
-                intent.putExtra("inclination", inclination);
                 intent.putExtra("rowIndex", position);
-                intent.putExtra("hardness", hardness);
                 startActivity(intent);
             }
         });
+    }
+
+    //converts the JSON to a string
+    private JSONArray getJSONArray(String path) {
+        String json = null;
+        try {
+            InputStream is = getAssets().open(path);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        try{
+            return new JSONArray(json);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
