@@ -1,5 +1,8 @@
 package com.thurmer.gevindbor_table;
 
+import android.icu.text.NumberFormat;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,16 +17,20 @@ import java.io.InputStream;
 
 public class StandardDataActivity extends AppCompatActivity {
     String selectedStandard, path, nominalDiameter, threadsPrInch, hardness;
-    Float  pitch, outerDiameter, predrillingDiameter, cuttingDiameter, formingDiameter, minimumDiameter, maximumDiameter;
+    Double  pitch, outerDiameter, predrillingDiameter, cuttingDiameter, formingDiameter, minimumDiameter, maximumDiameter;
     Integer rowIndex, inclination;
 
     JSONArray jsonarray;
     JSONObject jsonobject;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standard_data);
+
+        //Gets default localization format
+        NumberFormat format = NumberFormat.getInstance();
 
         //Gets extra data from the previous activity
         selectedStandard = getIntent().getStringExtra("selectedStandard");
@@ -83,8 +90,8 @@ public class StandardDataActivity extends AppCompatActivity {
             nominalDiameter = jsonobject.getString("nominalDiameter");
 
             if (jsonobject.has("pitch")) {
-                pitch = Float.valueOf(jsonobject.getString("pitch"));
-                pitchTV.setText(String.valueOf(pitch));
+                pitch = Double.valueOf(jsonobject.getString("pitch"));
+                pitchTV.setText(format.format(pitch));
             } else {
                 pitchTitleTV.setVisibility(View.GONE);
                 pitchTV.setVisibility(View.GONE);
@@ -99,41 +106,41 @@ public class StandardDataActivity extends AppCompatActivity {
             }
 
             if (jsonobject.has("outerDiameter")) {
-                outerDiameter = Float.valueOf(jsonobject.getString("outerDiameter"));
-                outerDiameterTV.setText(String.valueOf(outerDiameter));
+                outerDiameter = Double.valueOf(jsonobject.getString("outerDiameter"));
+                outerDiameterTV.setText(format.format(outerDiameter));
             } else {
                 outerDiameterTitleTV.setVisibility(View.GONE);
                 outerDiameterTV.setVisibility(View.GONE);
             }
 
             if (jsonobject.has("predrillingDiameter")) {
-                predrillingDiameter = Float.valueOf(jsonobject.getString("predrillingDiameter"));
-                predrillingDiameterTV.setText(String.valueOf(predrillingDiameter));
+                predrillingDiameter = Double.valueOf(jsonobject.getString("predrillingDiameter"));
+                predrillingDiameterTV.setText(format.format(predrillingDiameter));
             } else {
                 predrillingDiameterTV.setVisibility(View.GONE);
             }
 
             if (jsonobject.has("cuttingDiameter")) {
-                cuttingDiameter = Float.valueOf(jsonobject.getString("cuttingDiameter"));
-                cuttingDiameterTV.setText(String.valueOf(cuttingDiameter));
+                cuttingDiameter = Double.valueOf(jsonobject.getString("cuttingDiameter"));
+                cuttingDiameterTV.setText(format.format(cuttingDiameter));
             } else {
                 cuttingDiameterTitleTV.setVisibility(View.GONE);
                 cuttingDiameterTV.setVisibility(View.GONE);
             }
 
             if (jsonobject.has("formingDiameter")) {
-                formingDiameter = Float.valueOf(jsonobject.getString("formingDiameter"));
-                formingDiameterTV.setText(String.valueOf(formingDiameter));
+                formingDiameter = Double.valueOf(jsonobject.getString("formingDiameter"));
+                formingDiameterTV.setText(format.format(formingDiameter));
             } else {
                 formingDiameterTitleTV.setVisibility(View.GONE);
                 formingDiameterTV.setVisibility(View.GONE);
             }
 
             if(jsonobject.has("minimumDiameter") && jsonobject.has("maximumDiameter")) {
-                minimumDiameter = Float.valueOf(jsonobject.getString("minimumDiameter"));
-                maximumDiameter = Float.valueOf(jsonobject.getString("maximumDiameter"));
-                minTV.setText(String.valueOf(minimumDiameter));
-                maxTV.setText(String.valueOf(maximumDiameter));
+                minimumDiameter = Double.valueOf(jsonobject.getString("minimumDiameter"));
+                maximumDiameter = Double.valueOf(jsonobject.getString("maximumDiameter"));
+                minTV.setText(format.format(minimumDiameter));
+                maxTV.setText(format.format(maximumDiameter));
             } else {
                 innerDiameterTitleTV.setVisibility(View.GONE);
                 minTitleTV.setVisibility(View.GONE);

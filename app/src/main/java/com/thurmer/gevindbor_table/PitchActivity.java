@@ -1,6 +1,9 @@
 package com.thurmer.gevindbor_table;
 
 import android.content.Intent;
+import android.icu.text.NumberFormat;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,21 +24,24 @@ public class PitchActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     ListView listView;
 
-    String path;
-    String selectedStandard;
-    String nominalDiameter, pitch, threadsPrInch;
+    String path, selectedStandard, nominalDiameter, threadsPrInch;
+    Double pitch;
 
     int position;
 
     JSONArray jsonarray;
     JSONObject jsonobject;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pitch);
 
         listView = (ListView) findViewById(R.id.list2);
+
+        //Gets default localization format
+        NumberFormat format = NumberFormat.getInstance();
 
         selectedStandard = getIntent().getStringExtra("selectedStandard");
         position = getIntent().getIntExtra("position", 0);
@@ -53,10 +59,9 @@ public class PitchActivity extends AppCompatActivity {
                 jsonobject = jsonarray.getJSONObject(i);
                 nominalDiameter = jsonobject.getString("nominalDiameter");
                 if(jsonobject.has("pitch")) {
-                    pitch = jsonobject.getString("pitch");
-                    listItems.add("["+nominalDiameter+"] "+pitch+" mm");
-                }
-                if(jsonobject.has("threadsPrInch")) {
+                    pitch = Double.valueOf(jsonobject.getString("pitch"));
+                    listItems.add("["+nominalDiameter+"] "+format.format(pitch));
+                } else if(jsonobject.has("threadsPrInch")) {
                     threadsPrInch = jsonobject.getString("threadsPrInch");
                     listItems.add("["+nominalDiameter+"] "+threadsPrInch);
                 }

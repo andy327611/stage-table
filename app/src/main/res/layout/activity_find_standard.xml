@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textPersonName|numberDecimal"
+        android:inputType="numberDecimal"
+        android:digits="0123456789,."
         android:textAlignment="center" />
 
     <Button

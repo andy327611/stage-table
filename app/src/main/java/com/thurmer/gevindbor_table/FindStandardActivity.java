@@ -1,6 +1,11 @@
 package com.thurmer.gevindbor_table;
 
 import android.content.Intent;
+import android.icu.text.DecimalFormat;
+import android.icu.text.DecimalFormatSymbols;
+import android.icu.text.NumberFormat;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +21,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 public class FindStandardActivity extends AppCompatActivity {
@@ -30,12 +36,16 @@ public class FindStandardActivity extends AppCompatActivity {
     JSONArray jsonarray;
     JSONObject jsonobject;
     String cuttingDiameter;
-    String usrValue;
+
+    NumberFormat format;
+    Number usrValue;
+    String compareString;
 
     EditText findStandardET;
     Button findStandardBttn;
     ListView findStandardLV;
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +59,16 @@ public class FindStandardActivity extends AppCompatActivity {
         itemList = new ArrayList<>();
         foundList = new ArrayList<>();
         rowList = new ArrayList<>();
+
+        //Gets default localization format
+        format = NumberFormat.getInstance();
+
+        if (format instanceof DecimalFormat) {
+            DecimalFormatSymbols sym = ((DecimalFormat) format).getDecimalFormatSymbols();
+            compareString = "^[0-9]{1,2}(["+sym.getDecimalSeparator()+"][0-9]{1,2})?$";
+        } else {
+            compareString = "^[0-9]{1,2}([.,][0-9]{1,2})?$";
+        }
 
         //Gathers standard names from the standards master json
         jsonarray = getJSONArray("0_Standards.json");
@@ -72,8 +92,12 @@ public class FindStandardActivity extends AppCompatActivity {
                 foundList.clear();
                 rowList.clear();
 
-                if(findStandardET.getText().toString().matches("^[0-9]{1,2}([.][0-9]{1,2})?$")) {
-                    usrValue = findStandardET.getText().toString();
+                if(findStandardET.getText().toString().matches(compareString)) {
+                    try {
+                        usrValue = format.parse(findStandardET.getText().toString());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
 
                     for (int i = 0; i < standardsList.size(); i++) {
                         try {
@@ -97,7 +121,7 @@ public class FindStandardActivity extends AppCompatActivity {
                                     cuttingDiameter = jsonobject.getString("predrillingDiameter");
                                 }
 
-                                if((Math.abs(Double.valueOf(cuttingDiameter)-Double.valueOf(usrValue)) <= 0.000001)) {
+                                if((Math.abs(Double.valueOf(cuttingDiameter)-usrValue.doubleValue()) <= 0.000001)) {
                                     foundList.add(standardsList.get(i));
                                     rowList.add(j);
                                     itemList.add("["+standardsList.get(i) + "] " + jsonobject.getString("nominalDiameter"));
@@ -109,7 +133,7 @@ public class FindStandardActivity extends AppCompatActivity {
 
                         adapter.notifyDataSetChanged();
                         findStandardLV.setAdapter(adapter);
-                        
+
                         //Adds a clickListener to the items to bring information to the nex activity
                         findStandardLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
