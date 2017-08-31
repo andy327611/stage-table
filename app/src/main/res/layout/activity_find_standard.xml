@@ -31,7 +31,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="@string/text_find"
-        android:backgroundTint="@color/colorPrimary"
         android:textColor="#FFFFFF"/>
 
     <ListView
