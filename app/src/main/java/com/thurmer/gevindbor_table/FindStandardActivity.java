@@ -92,6 +92,9 @@ public class FindStandardActivity extends AppCompatActivity {
                 foundList.clear();
                 rowList.clear();
 
+                adapter.notifyDataSetChanged();
+                findStandardLV.setAdapter(adapter);
+
                 if(findStandardET.getText().toString().matches(compareString)) {
                     try {
                         usrValue = format.parse(findStandardET.getText().toString());
@@ -147,6 +150,7 @@ public class FindStandardActivity extends AppCompatActivity {
                         });
                     }
                 } else {
+
                     findStandardET.setText("");
                     findStandardET.setError("Incorrect value");
                 }
